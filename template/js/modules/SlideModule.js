@@ -4,7 +4,7 @@ export default function SlideModule(){
         //console.log(width);
         if (width <= 1200 && document.querySelector('#slide-home')) {
             const swiper = document.querySelector('#slide-home');
-            const sliderContainer = swiper.querySelector('.swiper-container');
+            const sliderContainer = swiper.querySelector('.swiper');
             const SliderPagination = swiper.querySelector('.swiper-pagination-orange');
             const sliderPrevBtn = swiper.querySelector('.swiper-prev');
             const sliderNextBtn = swiper.querySelector('.swiper-next');
@@ -57,7 +57,7 @@ export default function SlideModule(){
     });
 
     document.querySelectorAll('.swiper-custom').forEach(el => {
-        const slider = el.querySelector('.swiper-container');
+        const slider = el.querySelector('.swiper');
         const pagination = el.querySelector('.swiper-pagination');
         const prevBtn = el.querySelector('.swiper-button-prev');
         const nextBtn = el.querySelector('.swiper-button-next');
@@ -90,9 +90,9 @@ export default function SlideModule(){
     })
 
 
-    if (document.querySelector('#slideasd')) {
-        const swiper = document.querySelector('#slideasd');
-        const sliderContainer = swiper.querySelector('.swiper-container');
+    if (document.querySelector('.swiper-demo')) {
+        const swiper = document.querySelector('.swiper-demo');
+        const sliderContainer = swiper.querySelector('.swiper');
         const SliderPagination = swiper.querySelector('.swiper-pagination');
         const sliderPrevBtn = swiper.querySelector('.swiper-button-prev');
         const sliderNextBtn = swiper.querySelector('.swiper-button-next');
@@ -101,18 +101,19 @@ export default function SlideModule(){
                 speed: 1000,
                     loop: true,
                     spaceBetween: 20,
+                    slidesPerView: 2,
                     // autoplay: {
                     //     delay: 4000,
                     // },
-                    // pagination: {
-                    //     el: '.swiper-pagination',
-                    //     clickable: true,
-                    // },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
 
-                    // navigation: {
-                    //     nextEl: '.swiper-button-next',
-                    //     prevEl: '.swiper-button-prev',
-                    // },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
 
                     breakpoints: {
                         // 320: {

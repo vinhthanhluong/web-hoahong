@@ -1916,15 +1916,15 @@ sup {
   }
 }
 
-.swiper-container .swiper-pagination {
+.swiper .swiper-pagination {
   bottom: 0;
 }
-.swiper-container .swiper-pagination-bullet {
+.swiper .swiper-pagination-bullet {
   width: 6px;
   height: 6px;
   margin: 0 6px;
 }
-.swiper-container .swiper-pagination-bullet-active {
+.swiper .swiper-pagination-bullet-active {
   background-color: #F79028;
   width: 8px;
   height: 8px;

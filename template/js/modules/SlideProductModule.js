@@ -3,8 +3,8 @@ export default function SlideProductModule() {
 
         if (document.querySelector('#slide-thumbs')) {
             const swiper = document.querySelector('#slide-thumbs');
-            const sliderContainer = swiper.querySelector('.swiper-container');
-            const SliderPagination = swiper.querySelector('.swiper-pagination-');
+            const sliderContainer = swiper.querySelector('.swiper');
+            const SliderPagination = swiper.querySelector('.swiper-pagination');
             const sliderPrevBtn = swiper.querySelector('.swiper-prev');
             const sliderNextBtn = swiper.querySelector('.swiper-next');
             try {
