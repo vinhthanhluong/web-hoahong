@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(../font/font-popins/stylesheet.css);
 @import url(../js/libs/aos/aos.css);
+@import url(../js/libs/wow/wow.css);
 @import url(../js/libs/swiper/swiper.min.css);
 @import url(../js/libs/popup/magnific-popup.css);
 @import url(../js/libs/lightgallery/lightgallery.css);
@@ -267,6 +268,18 @@ li {
   -ms-touch-action: none;
   touch-action: none;
   -webkit-overflow-scrolling: auto;
+}
+
+.wow {
+  animation-duration: 1s;
+}
+@media screen and (max-width: 767px) {
+  .wow {
+    visibility: visible !important;
+    -webkit-animation-name: none !important;
+    -o-animation-name: none !important;
+    animation-name: none !important;
+  }
 }
 
 *,
@@ -978,6 +991,16 @@ sup {
     overflow-y: auto;
     height: 400px;
   }
+  .header-menu-nav::-webkit-scrollbar {
+    width: 3px;
+  }
+  .header-menu-nav::-webkit-scrollbar-thumb {
+    background: #F79028;
+    border-radius: 990px;
+  }
+  .header-menu-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 .header-menu-nav a {
   position: relative;
@@ -1024,11 +1047,15 @@ sup {
     color: #F79028;
   }
 }
-.header-menu-nav .current-menu a {
+.header-menu-nav .current-menu > a {
   color: #F79028;
 }
-.header-menu-nav .current-menu a::before {
+.header-menu-nav .current-menu > a::before {
   width: calc(100% - 24px);
+}
+.header-menu-nav .current-menu .current-menu > a {
+  background-color: #F79028;
+  color: #fff;
 }
 
 .dropdown {
@@ -1414,6 +1441,10 @@ sup {
   text-transform: capitalize;
 }
 
+.f-italic {
+  font-style: italic;
+}
+
 .f-bold {
   font-weight: bold;
 }
@@ -1433,6 +1464,16 @@ sup {
   padding-top: 0;
 }
 .sec-100.--pb-0 {
+  padding-bottom: 0;
+}
+
+.sec-90 {
+  padding: 90px 0;
+}
+.sec-90.--pt-0 {
+  padding-top: 0;
+}
+.sec-90.--pb-0 {
   padding-bottom: 0;
 }
 
@@ -1488,6 +1529,8 @@ sup {
 
 @media screen and (max-width: 1199px) {
   .sec-100,
+.sec-90,
+.sec-70,
 .sec-80 {
     padding: 60px 0;
   }
@@ -1500,6 +1543,8 @@ sup {
 }
 @media screen and (max-width: 991px) {
   .sec-100,
+.sec-90,
+.sec-70,
 .sec-80 {
     padding: 40px 0;
   }
@@ -1842,6 +1887,7 @@ sup {
 }
 .tab .tab-content-box.active {
   display: block;
+  animation: fadeInUp 1s;
 }
 .tab-lines .tab-link {
   border-bottom: 1px blue solid;
@@ -2102,25 +2148,25 @@ sup {
   }
 }
 
-.banner .swiper-wrapper {
+.banners .swiper-wrapper {
   margin: 0;
 }
-.banner .swiper-slide {
+.banners .swiper-slide {
   padding: 0;
   height: 100%;
 }
-.banner .swiper-slide > img {
+.banners .swiper-slide > img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-.banner .swiper-button-prev {
+.banners .swiper-button-prev {
   left: 20px;
 }
-.banner .swiper-button-next {
+.banners .swiper-button-next {
   right: 20px;
 }
-.banner .swiper-pagination {
+.banners .swiper-pagination {
   position: absolute;
   bottom: 0;
 }
@@ -2526,6 +2572,57 @@ html .mfp-wrap {
 }
 .breadcrumb .breadcrumb-menu .breadcrumb-list a:hover {
   color: #F79028;
+}
+
+.box-star-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+}
+.star .empty-stars,
+.star .filled-stars {
+  text-shadow: none;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 10px;
+  line-height: 1;
+  height: 14px;
+}
+.star .empty-stars i,
+.star .filled-stars i {
+  margin: 2px 1px;
+}
+.star .empty-stars {
+  color: #ffd84e;
+}
+.star .filled-stars {
+  color: #ffd84e;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.process {
+  max-width: calc(100% - 8rem);
+  width: 13rem;
+  margin-right: auto;
+  margin-left: 5px;
+  background-color: #eeeeee;
+  border-radius: 999px;
+  height: 5px;
+}
+.process div {
+  height: 100%;
+  background-color: red;
+  border-radius: 999px;
 }
 
 #notfound {

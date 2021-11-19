@@ -19,6 +19,7 @@ export default function DropdownMenuModu() {
             $(this).parent().next('.sub-menu').slideToggle();
             $(this).toggleClass('--show');
             $(this).closest('.dropdown').siblings().find('.sub-menu').slideUp();
+            $(this).closest('.dropdown').siblings().find('i').removeClass('--show');
         }
     });
 

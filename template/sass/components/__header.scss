@@ -345,6 +345,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         height: 400px;
+        @include custom-scrollbar(3px,$main-cl)
     }
 
     // li {
@@ -399,13 +400,19 @@
     }
 
     .current-menu {
-        a {
+        > a {
             color: $main-cl;
 
             &::before{
                 width: calc(100% - 24px);
             }
+        }
 
+        .current-menu{
+            > a{
+                background-color: $main-cl;
+                color: $w-cl;
+            }
         }
     }
 

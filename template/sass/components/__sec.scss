@@ -7,6 +7,15 @@
 		padding-bottom: 0;
 	}
 }
+.sec-90 {
+	padding: 90px 0;
+	&.--pt-0 {
+		padding-top: 0;
+	}
+	&.--pb-0 {
+		padding-bottom: 0;
+	}
+}
 .sec-80 {
 	padding: 80px 0;
 	&.--pt-0 {
@@ -54,6 +63,8 @@
 }
 @include max-media($bk-d-1200) {
 	.sec-100,
+	.sec-90,
+	.sec-70,
 	.sec-80 {
 		padding: 60px 0;
 	}
@@ -65,6 +76,8 @@
 }
 @include max-media($bk-d-992) {
 	.sec-100,
+	.sec-90,
+	.sec-70,
 	.sec-80 {
 		padding: 40px 0;
 	}

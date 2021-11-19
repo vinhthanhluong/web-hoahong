@@ -3,6 +3,7 @@
 @import url(../font/font-popins/stylesheet.css);
 //Libraries
 @import url(../js/libs/aos/aos.css);
+@import url(../js/libs/wow/wow.css);
 @import url(../js/libs/swiper/swiper.min.css);
 @import url(../js/libs/popup/magnific-popup.css);
 @import url(../js/libs/lightgallery/lightgallery.css);
@@ -37,6 +38,7 @@
 @import './components/_lightgallery';
 @import './components/_popup';
 @import './components/_breadcrumb';
+@import './components/_code-components';;
 // Page
 @import './page/_home';
 @import './page/_404';
