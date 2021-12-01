@@ -423,7 +423,7 @@
     position: relative;
 
     //hover trên deskop
-    @include min-media($bk-d-1200) {
+    @include min-media($bk-1200) {
         &:hover {
             >.sub-menu {
                 transform: translateY(0);

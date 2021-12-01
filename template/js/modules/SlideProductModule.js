@@ -5,8 +5,8 @@ export default function SlideProductModule() {
             const swiper = document.querySelector('#slide-thumbs');
             const sliderContainer = swiper.querySelector('.swiper');
             const SliderPagination = swiper.querySelector('.swiper-pagination');
-            const sliderPrevBtn = swiper.querySelector('.swiper-prev');
-            const sliderNextBtn = swiper.querySelector('.swiper-next');
+            const sliderPrevBtn = swiper.querySelector('.swiper-button-prev');
+            const sliderNextBtn = swiper.querySelector('.swiper-button-next');
             try {
                 const thumbsmall = new Swiper('#thumbs-small', {
                     speed: 1000,

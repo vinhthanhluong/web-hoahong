@@ -141,6 +141,11 @@
   --theme-text-color: var(#333);
 }
 
+::selection {
+  background-color: #F79028;
+  color: #fff;
+}
+
 html {
   overflow-x: hidden;
   font-size: 10px;
@@ -693,6 +698,20 @@ sup {
     opacity: 0;
   }
 }
+@keyframes jelly {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
 .main-cl {
   color: #F79028;
 }
@@ -1061,7 +1080,7 @@ sup {
 .dropdown {
   position: relative;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .dropdown:hover > .sub-menu {
     transform: translateY(0);
     pointer-events: auto;
@@ -1549,6 +1568,26 @@ sup {
     padding: 40px 0;
   }
 }
+.--mt-0 {
+  margin-top: 0;
+}
+
+.--mb-0 {
+  margin-bottom: 0;
+}
+
+.--mr-0 {
+  margin-right: 0;
+}
+
+.--ml-0 {
+  margin-left: 0;
+}
+
+.--m-0 {
+  margin: 0;
+}
+
 .--mt-20 {
   margin-top: 20px;
 }
@@ -2085,24 +2124,31 @@ sup {
   border-bottom: 2px rgba(255, 255, 255, 0.5) solid;
   border-radius: 0;
   padding: 20px 38px 20px 2px;
-  font-size: 30px;
+  font-size: 24px;
   height: auto;
   color: #fff;
-  font-weight: 100;
+  font-weight: normal;
 }
 @media screen and (max-width: 991px) {
   .search-mobile .f-control {
-    font-size: 24px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-mobile .f-control {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .search-mobile .f-control {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
 @media screen and (max-width: 767px) {
   .search-mobile .f-control {
-    font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 34px;
   }
 }
 .search-mobile .f-submit {

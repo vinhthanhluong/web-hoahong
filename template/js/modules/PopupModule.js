@@ -18,4 +18,30 @@ export default function PopupModule(){
 			}
 		}
     });
+
+	$(document).on('click', '.popup-btn', function (e) {
+		e.preventDefault();
+		const link = $(this).attr('href') || $(this).attr('data-mfp-src');
+		$.magnificPopup.open({
+			items: {
+				src: link,
+			},
+			type: 'inline',
+			mainClass: 'mfp-zoom-in', // add class
+			modal: false, // CLOSE POPUP WHEN CLICK OUTSIDE
+			midClick: true,
+			removalDelay: 500, // DELAY BEFORE CLOSE POPUP
+			preloader: false,
+			fixedBgPos: true, // SET HEIGHT BACKGROUND FIX WITH CONTENT
+			fixedContentPos: false, // FIXED CONTENT AT CLICKED POSITION
+			callbacks: {
+				open: function () {
+					$('body').addClass('modal-open');
+				},
+				close: function () {
+					$('body').removeClass('modal-open');
+				},
+			},
+		});
+	});	
 }

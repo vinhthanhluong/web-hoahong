@@ -16,6 +16,11 @@
     --theme-text-color: var(#{$dark-cl});
 }
 
+::selection {
+	background-color: $main-cl;
+	color: $t-w-cl;
+}
+
 html {
     overflow-x: hidden;
     font-size: $fz-base;

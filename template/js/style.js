@@ -10,7 +10,7 @@ import MenuModule from './modules/MenuModule.js';
 import AosModule from './modules/AosModule.js';
 import GridModule from './modules/GridModule.js';
 import PopupModule from './modules/PopupModule.js';
-import DisableModule from './modules/DisableModule.js';
+import FormModule from './modules/FormModule.js';
 import LightGalleryModule from './modules/LightGalleryModule.js';
 import SlideModule from './modules/SlideModule.js';
 import TabModule from './modules/TabModule.js';
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
     AosModule();
     GridModule();   
     PopupModule();
-    DisableModule();
+    FormModule
     LightGalleryModule();
     SlideModule();
     TabModule();

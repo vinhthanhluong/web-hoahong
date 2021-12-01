@@ -106,13 +106,13 @@ export default function SlideModule(){
                     //     delay: 4000,
                     // },
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: SliderPagination,
                         clickable: true,
                     },
 
                     navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
+                        nextEl: sliderNextBtn,
+                        prevEl: sliderPrevBtn,
                     },
 
                     breakpoints: {
