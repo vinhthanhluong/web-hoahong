@@ -959,13 +959,13 @@ sup {
   margin-bottom: 8px;
 }
 
-.header-menu-inner .header-menu-logo {
+.header-menu-inner .logo-mobile {
   display: none;
   max-width: 200px;
   margin: 0 auto 20px;
 }
 @media screen and (max-width: 1199px) {
-  .header-menu-inner .header-menu-logo {
+  .header-menu-inner .logo-mobile {
     display: block;
   }
 }
@@ -999,36 +999,35 @@ sup {
   }
 }
 
-.header-menu-nav {
+.header-list {
   position: relative;
   display: flex;
 }
 @media screen and (max-width: 1199px) {
-  .header-menu-nav {
+  .header-list {
     display: block;
     overflow-x: hidden;
     overflow-y: auto;
     height: 400px;
   }
-  .header-menu-nav::-webkit-scrollbar {
+  .header-list::-webkit-scrollbar {
     width: 3px;
   }
-  .header-menu-nav::-webkit-scrollbar-thumb {
+  .header-list::-webkit-scrollbar-thumb {
     background: #F79028;
     border-radius: 990px;
   }
-  .header-menu-nav::-webkit-scrollbar-track {
+  .header-list::-webkit-scrollbar-track {
     background: transparent;
   }
 }
-.header-menu-nav a {
+.header-list a {
   position: relative;
   padding: 8px 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
-  text-transform: uppercase;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1036,14 +1035,14 @@ sup {
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 1199px) {
-  .header-menu-nav a {
+  .header-list a {
     padding: 10px 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.16);
     transition: all 0.3s ease;
   }
 }
 @media screen and (min-width: 1200px) {
-  .header-menu-nav > li > a::before {
+  .header-list > li > a::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1054,25 +1053,25 @@ sup {
     background-color: #F79028;
     transition: all 0.3s ease;
   }
-  .header-menu-nav > li > a:hover {
+  .header-list > li > a:hover {
     color: #F79028;
   }
-  .header-menu-nav > li > a:hover::before {
+  .header-list > li > a:hover::before {
     width: calc(100% - 24px);
   }
 }
 @media screen and (max-width: 1199px) {
-  .header-menu-nav > li > a:focus {
+  .header-list > li > a:focus {
     color: #F79028;
   }
 }
-.header-menu-nav .current-menu > a {
+.header-list .current-menu-item > a {
   color: #F79028;
 }
-.header-menu-nav .current-menu > a::before {
+.header-list .current-menu-item > a::before {
   width: calc(100% - 24px);
 }
-.header-menu-nav .current-menu .current-menu > a {
+.header-list .current-menu-item .current-menu-item > a {
   background-color: #F79028;
   color: #fff;
 }
@@ -1094,12 +1093,16 @@ sup {
     transform: rotate(-90deg);
   }
 }
+@media screen and (max-width: 1199px) {
+  .dropdown:hover > a {
+    color: #F79028;
+  }
+}
+.dropdown .dropdown:hover > a {
+  background-color: #F79028;
+  color: #fff;
+}
 .dropdown a {
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
   transition: all 0.3s ease;
 }
 .dropdown .fa.fa-angle-down {
@@ -2671,6 +2674,383 @@ html .mfp-wrap {
   border-radius: 999px;
 }
 
+/*SƠ ĐỒ TỔ CHỨC*/
+.diagram {
+  --h-l: 7.45rem;
+  --w: 16.6rem;
+  padding-top: 12rem;
+}
+.diagram .decor.decor {
+  top: -1.5rem;
+  right: 95%;
+}
+
+.diagram-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diagram-st > p {
+  position: relative;
+  z-index: 1;
+  background-color: wheat;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  height: 9rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid wheat;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.diagram-st > p:hover {
+  background-color: #fff;
+  color: wheat;
+}
+
+.lv-1.diagram-st {
+  position: relative;
+  margin-bottom: 11.5rem;
+}
+.lv-1.diagram-st p {
+  width: 44rem;
+  background-color: #fff;
+  color: wheat;
+  border: 1px solid wheat;
+  font-size: 2.4rem;
+}
+.lv-1.diagram-st:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.1rem;
+  transform: translate(-50%, 100%);
+  height: 11.5rem;
+  width: 0.1rem;
+  background-color: wheat;
+}
+.lv-1.diagram-st:hover {
+  background-color: wheat;
+  color: #fff;
+}
+
+.lv-2.diagram-st {
+  position: relative;
+  margin-bottom: calc(var(--h-l) * 2);
+}
+.lv-2.diagram-st p {
+  width: 39.2rem;
+  font-size: 2rem;
+}
+.lv-2.diagram-st:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.2rem;
+  transform: translate(-50%, 100%);
+  height: var(--h-l);
+  width: 0.1rem;
+  background-color: wheat;
+}
+
+.lv-3-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: calc(var(--h-l) * 2);
+  display: flex;
+  justify-content: space-between;
+}
+.lv-3-wrap:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--h-l) * -1);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.1rem;
+  width: calc(100% - var(--w));
+  background-color: wheat;
+}
+
+.lv-3 {
+  position: relative;
+  width: var(--w);
+}
+.lv-3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  height: var(--h-l);
+  width: 0.1rem;
+  background-color: wheat;
+}
+
+.lv-4-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.lv-4-wrap .left,
+.lv-4-wrap .right {
+  width: 50%;
+}
+.lv-4-wrap .left > div {
+  position: relative;
+  width: calc(var(--w) * 3 + 2.8rem);
+  display: flex;
+  justify-content: space-between;
+}
+.lv-4-wrap .left > div:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(var(--h-l) * -1);
+  transform: translateX(-50%);
+  height: 0.1rem;
+  width: calc(100% - var(--w));
+  background-color: wheat;
+}
+.lv-4-wrap .left > div:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -0.1rem;
+  transform: translate(-50%, -100%);
+  height: calc(var(--h-l) * 2);
+  width: 0.1rem;
+  background-color: wheat;
+}
+.lv-4-wrap .right {
+  position: relative;
+  padding-left: 9.5rem;
+}
+.lv-4-wrap .right:before {
+  content: "";
+  position: absolute;
+  bottom: 4.5rem;
+  left: -0.05rem;
+  height: 36rem;
+  width: 0.1rem;
+  background-color: wheat;
+}
+.lv-4-wrap .right .lv-4:before {
+  display: none;
+}
+.lv-4-wrap .right .lv-4:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  width: 9.5rem;
+  height: 0.1rem;
+  background-color: wheat;
+}
+
+.lv-4 {
+  position: relative;
+  width: var(--w);
+}
+.lv-4:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  height: var(--h-l);
+  width: 0.1rem;
+  background-color: wheat;
+}
+
+.lv-4-mobile {
+  display: none;
+  position: relative;
+  padding-left: var(--h-l);
+}
+.lv-4-mobile:before {
+  content: "";
+  position: absolute;
+  left: calc(var(--h-l) / 2);
+  bottom: var(--h-l);
+  width: 0.1rem;
+  height: 100%;
+  background-color: wheat;
+}
+.lv-4-mobile .lv-4 {
+  margin-top: 1rem;
+}
+.lv-4-mobile .lv-4:before {
+  display: none;
+}
+.lv-4-mobile .lv-4:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  height: 0.1rem;
+  width: calc(var(--h-l) / 2);
+  background-color: wheat;
+}
+
+@media screen and (max-width: 1440px -1) {
+  .diagram {
+    --w: 14.6rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .lv-1.diagram-st {
+    margin-bottom: 7.45rem;
+  }
+  .lv-1.diagram-st p {
+    font-size: 2rem;
+  }
+
+  .lv-2.diagram-st p {
+    font-size: 1.8rem;
+  }
+
+  .diagram {
+    --h-l: 3.725rem;
+    --w: 11.6rem;
+  }
+
+  .diagram-st > p {
+    font-size: 1.1rem;
+  }
+
+  .lv-4-wrap .left > div {
+    width: calc(var(--w) * 3 + 1.9rem);
+  }
+}
+@media screen and (max-width: 991px) {
+  .diagram {
+    padding-top: 8rem;
+    --w: 8.6rem;
+  }
+  .diagram-st > p {
+    height: 7rem;
+    padding: 0.5rem;
+  }
+
+  .lv-4-wrap .right:before {
+    bottom: 3.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .diagram {
+    --h-l: 3rem;
+    --w: 100%;
+  }
+
+  .lv-1.diagram-st {
+    margin-bottom: calc(var(--h-l) * 2);
+    width: 100%;
+  }
+  .lv-1.diagram-st p {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .lv-2.diagram-st {
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .lv-2.diagram-st p {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  .lv-2.diagram-st:before {
+    bottom: -0.1rem;
+  }
+
+  .diagram-st > p {
+    height: 6rem;
+  }
+
+  .lv-3-wrap {
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .lv-3-wrap:before {
+    width: calc(50% - calc(var(--h-l) / 2));
+    left: calc(var(--h-l) / 2);
+    transform: translate(0);
+  }
+  .lv-3-wrap:after {
+    content: "";
+    position: absolute;
+    top: calc(var(--h-l) * -1);
+    left: calc(var(--h-l) / 2);
+    height: 100%;
+    width: 0.1rem;
+    background-color: wheat;
+  }
+
+  .lv-3 {
+    margin-bottom: 1rem;
+  }
+  .lv-3:before {
+    display: none;
+  }
+  .lv-3:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    width: calc(var(--h-l) / 2);
+    height: 0.1rem;
+    background-color: wheat;
+  }
+  .lv-3:last-child {
+    margin-bottom: 0;
+  }
+
+  .lv-4-wrap:before {
+    display: none;
+  }
+  .lv-4-wrap .left {
+    display: none;
+  }
+  .lv-4-wrap .right {
+    width: var(--w);
+    padding-left: var(--h-l);
+  }
+  .lv-4-wrap .right::before {
+    height: 7rem;
+    bottom: 3rem;
+    left: 1.5rem;
+  }
+  .lv-4-wrap .right .lv-4:after {
+    width: calc(var(--h-l) / 2);
+  }
+
+  .lv-4-wrap-mobile {
+    height: auto;
+  }
+  .lv-4-wrap-mobile:after {
+    top: var(--h-l);
+  }
+
+  .lv-4-mobile {
+    display: block;
+  }
+}
 #notfound {
   position: relative;
   height: 100vh;

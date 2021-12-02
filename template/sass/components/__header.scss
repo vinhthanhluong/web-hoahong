@@ -18,6 +18,7 @@
 
 .header-top {
     background-color: wheat;
+
     &-inner {
         display: flex;
         align-items: center;
@@ -32,6 +33,7 @@
 
 .header-bottom {
     background: $w-cl;
+
     &-inner {
         padding: 8px 0;
         display: flex;
@@ -117,9 +119,10 @@
     }
 }
 
-.header-cart{
+.header-cart {
     position: relative;
-    .cart-btn{
+
+    .cart-btn {
         //color: $t-b-cl;
         cursor: pointer;
         position: relative;
@@ -154,6 +157,7 @@
             @include visible;
         }
     }
+
     .cart-content {
         position: absolute;
         top: 40px;
@@ -165,7 +169,8 @@
         padding: 30px 24px;
         @include hidden;
         transition: all .3s ease;
-        @include max-media($bk-576){
+
+        @include max-media($bk-576) {
             padding: 15px;
             width: 260px;
             // right: -75px;
@@ -178,7 +183,8 @@
                 padding-bottom: 20px;
                 border-bottom: 1px solid rgba($color: $b-cl, $alpha: 0.1);
                 margin-bottom: 20px;
-                @include max-media($bk-576){
+
+                @include max-media($bk-576) {
                     padding-bottom: 15px;
                     margin-bottom: 15px;
                 }
@@ -201,7 +207,8 @@
                 position: relative;
                 cursor: pointer;
                 border-radius: 6px;
-                @include max-media($bk-576){
+
+                @include max-media($bk-576) {
                     margin-left: 12px;
                 }
 
@@ -241,7 +248,8 @@
             .cart-info {
                 margin-bottom: 2px;
                 margin-left: 13px;
-                @include max-media($bk-576){
+
+                @include max-media($bk-576) {
                     margin-left: 10px;
                 }
 
@@ -296,7 +304,7 @@
 .header-menu {
 
     &-inner {
-        .header-menu-logo {
+        .logo-mobile {
             display: none;
             max-width: 200px;
             margin: 0 auto 20px;
@@ -334,7 +342,7 @@
     }
 }
 
-.header-menu-nav {
+.header-list {
     position: relative;
     display: flex;
     // justify-content: center;
@@ -345,10 +353,10 @@
         overflow-x: hidden;
         overflow-y: auto;
         height: 400px;
-        @include custom-scrollbar(3px,$main-cl)
+        @include custom-scrollbar(3px, $main-cl)
     }
 
-    // li {
+    // style chung
     a {
         position: relative;
         padding: 8px 12px;
@@ -356,7 +364,7 @@
         align-items: center;
         justify-content: space-between;
         font-weight: bold;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         @include trans(.3s);
         //color: $t-b-cl;
 
@@ -368,8 +376,9 @@
         }
     }
 
-    > li {
-        > a{
+    // live 1
+    >li {
+        >a {
             @include min-media($bk-1200) {
                 &::before {
                     content: "";
@@ -382,41 +391,42 @@
                     background-color: $main-cl;
                     transition: all .3s ease;
                 }
+
                 &:hover {
                     color: $main-cl;
-    
+
                     &::before {
                         width: calc(100% - 24px);
                     }
                 }
             }
 
-            &:focus{
-                @include max-media($bk-d-1200){
+            &:focus {
+                @include max-media($bk-d-1200) {
                     color: $main-cl;
                 }
             }
         }
     }
 
-    .current-menu {
-        > a {
+    // active live1
+    .current-menu-item {
+        >a {
             color: $main-cl;
 
-            &::before{
+            &::before {
                 width: calc(100% - 24px);
             }
         }
 
-        .current-menu{
-            > a{
+        // active live 2
+        .current-menu-item {
+            >a {
                 background-color: $main-cl;
                 color: $w-cl;
             }
         }
     }
-
-    // }
 }
 
 .dropdown {
@@ -445,12 +455,30 @@
         }
     }
 
+    // mobile
+    @include max-media($bk-d-1200){
+        &:hover{
+            > a{
+                color: $main-cl;
+            }
+        }
+    }
+
+    .dropdown {
+        &:hover {
+            >a {
+                background-color: $main-cl;
+                color: $w-cl;
+            }
+        }
+    }
+
     a {
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-transform: uppercase;
+        // font-weight: bold;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        // text-transform: uppercase;
         transition: all .3s ease;
     }
 
@@ -461,6 +489,7 @@
         transition: transform .3s;
         text-align: center;
 
+        // mobile
         @include max-media($bk-d-1200) {
             position: absolute;
             top: 0;
@@ -478,8 +507,6 @@
             }
 
         }
-
-
     }
 
 
@@ -503,6 +530,7 @@
         left: 100%;
     }
 
+    //desktop
     @include min-media($bk-1200) {
         transition: .3s;
         transform: translateY(10px);
@@ -521,6 +549,7 @@
         }
     }
 
+    //mobile
     @include max-media($bk-d-1200) {
         position: relative;
         top: 0 !important;

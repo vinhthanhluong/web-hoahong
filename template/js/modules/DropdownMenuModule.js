@@ -9,7 +9,7 @@ export default function DropdownMenuModu() {
         
     // }
 
-    document.querySelectorAll('.header-menu-nav .dropdown').forEach(el => {
+    document.querySelectorAll('.header-list .dropdown').forEach(el => {
         const dropdown = el;
         const arrows = document.createElement("i");
         arrows.classList.add('fa', 'fa-angle-down');

@@ -44,4 +44,30 @@ export default function PopupModule(){
 			},
 		});
 	});	
+
+	$(document).on('click', '.video-popup, .video-btn', function (e) {
+		e.preventDefault();
+		const link =
+			$(this).attr('href') ||
+			$(this).attr('data-mfp-src') ||
+			'https://www.youtube.com/watch?v=GGC86Z5p0AI&list=RDGGC86Z5p0AI';
+		$.magnificPopup.open({
+			items: {
+				src: link,
+				type: 'iframe',
+			},
+			mainClass: 'mfp-zoom-in',
+			removalDelay: 160,
+			preloader: false,
+			fixedContentPos: false,
+			callbacks: {
+				open: function () {
+					$('body').addClass('modal-open');
+				},
+				close: function () {
+					$('body').removeClass('modal-open');
+				},
+			},
+		});
+	});
 }

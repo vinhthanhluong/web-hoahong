@@ -28,19 +28,6 @@ export default function TabModule() {
                     pane.classList.add('active');
                 }
             })
-
-            // tabs.each(function (tab, index) {
-            //     const pane = panes[index];
-            //     $(tab).click(function () {
-            //         $('.tab-title.active').removeClass('active');
-            //         $('.tab-content-box.active').removeClass('active');
-
-            //         $(this).addClass('active');
-            //         $(pane).addClass('active');
-            //     });
-            // });
-
-
         }
     }
 
@@ -64,7 +51,6 @@ export default function TabModule() {
         //     $(this).addClass("active");
         //     $("." + tab_id).addClass("active");
         // });
-
     }
 
 
@@ -83,7 +69,5 @@ export default function TabModule() {
             });
         });
     }
-
-
 
 }

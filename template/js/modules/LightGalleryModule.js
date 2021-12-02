@@ -1,4 +1,4 @@
-export default function LightGalleryModule(){
+export default function LightGalleryModule() {
     if ($('#lightgallery').length) {
 
         $("#lightgallery").lightGallery({
@@ -7,8 +7,11 @@ export default function LightGalleryModule(){
             // animateThumb: false,
             // showThumbByDefault: false
             download: false,
+            // animateThumb: true,
+            // showThumbByDefault: true,
+            // dynamic: true,
         });
     }
 
-   
+
 }
