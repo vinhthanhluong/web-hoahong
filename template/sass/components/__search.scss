@@ -16,54 +16,54 @@
 		cursor: pointer;
 	}
 }
-.search-desktop{
-    position: relative;
-    @include max-media($bk-768){
-        display: none;
-    }
-    .search-title{
-        color: rgba($color: $b-cl, $alpha: 0.4);
-        font-size: 16px;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+// .search-desktop{
+//     position: relative;
+//     @include max-media($bk-768){
+//         display: none;
+//     }
+//     .search-title{
+//         color: rgba($color: $b-cl, $alpha: 0.4);
+//         font-size: 16px;
+//         cursor: pointer;
+//         width: 40px;
+//         height: 40px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//     }
 
-    .search-form{
-        position: absolute;
-        top: 40px;
-        right: 0;
-        width: 220px;
-        transition: all .3s ease;
-        @include hidden;
-        animation: fade-out-bottom 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-        // @include max-media($bk-576){
-        //     display: none;
-        // }
-    }
+//     .search-form{
+//         position: absolute;
+//         top: 40px;
+//         right: 0;
+//         width: 220px;
+//         transition: all .3s ease;
+//         @include hidden;
+//         animation: fade-out-bottom 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+//         // @include max-media($bk-576){
+//         //     display: none;
+//         // }
+//     }
 
-    .f-control{
-        border-radius: 0;
-        line-height: 20px;
-        height: auto;
-        padding: 8px 38px 8px 15px;
+//     .f-control{
+//         border-radius: 0;
+//         line-height: 20px;
+//         height: auto;
+//         padding: 8px 38px 8px 15px;
         
-    }
-    .f-submit{
-        width: 38px;
-        height: 38px;
-    }
+//     }
+//     .f-submit{
+//         width: 38px;
+//         height: 38px;
+//     }
 
-    &.active{
-        .search-form{
-            @include visible;
-            animation: fade-in-bottom 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-        }
-    }
-}
+//     &.active{
+//         .search-form{
+//             @include visible;
+//             animation: fade-in-bottom 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+//         }
+//     }
+// }
 
 .search-mobile{
     display: none;
