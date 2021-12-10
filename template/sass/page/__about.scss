@@ -1,0 +1,261 @@
+.about-us {
+    background-color: $g-F2F2-cl;
+    margin: -160px 0 0;
+
+    .columns {
+        margin: 0;
+    }
+
+    .column {
+        width: 50%;
+        padding: 0;
+    }
+
+    .about-ig {
+        border-radius: 0 20px 0 0;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+
+        img {
+            border-radius: 0 20px 0 0;
+        }
+    }
+
+    .about-inner {
+        padding: 40px 30px;
+        background-color: $w-cl;
+        border-radius: 20px 0 0 0;
+        height: 100%;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .desc {
+        margin-top: 5px;
+        line-height: 1.5;
+        @include fz-16;
+    }
+
+    .label {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-right: 9px;
+        }
+    }
+
+    .about-b {
+        margin-top: 20px;
+    }
+}
+
+.choos-us {
+    // overflow: hidden;
+    background-color: $w-cl;
+
+    .columns {
+        // align-items: center;
+        flex-direction: row-reverse;
+        margin: 0;
+    }
+
+    .column {
+        width: 50%;
+        padding: 0;
+    }
+
+    .us-inner {
+        padding-left: 30px;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 15px;
+        @include min-media($bk-1200) {
+            padding-right: calc((100vw - 1200px) / 2);
+        }
+    }
+
+    .title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .desc {
+        line-height: 1.5;
+        @include fz-16;
+        margin-bottom: 20px;
+    }
+
+    .us-list {
+        margin: -10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .us-item {
+        width: 50%;
+        padding: 10px;
+        display: flex;
+        align-items: center
+    }
+
+    .us-text {
+        padding-left: 10px;
+    }
+
+    .us-tt {
+        @include fz-16;
+        font-weight: bold;
+    }
+
+    .img {
+        // width: 945px;
+        position: relative;
+        text-align: right;
+
+        img {
+            // position: absolute;
+            // top: 0;
+            // right: 0;
+            // transform: translateY(-50%);            
+        }
+    }
+
+
+
+
+
+}
+
+.about-system {
+    overflow: hidden;
+
+    .swiper-custom{
+        position: relative;
+    }
+
+    .stystem-slide{
+        overflow: hidden;
+
+    }
+
+    .swiper {
+        margin: 0 -15px;
+        padding: 25px 0 40px;
+    }
+    
+    .swiper-wrapper{
+        // margin: 0 -15px;
+    }
+
+    .swiper-slide {
+        width: calc(100% / 3);
+        padding: 0 15px;
+    }
+
+    .swiper-button-prev , .swiper-button-next{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        transition: all .3s ease;
+        background-color: $g-C4C4-cl;
+        color: $b-cl;
+        margin: 0;
+        top: 50%;
+
+        &:hover{
+            background-color: $main-cl;
+            color: $w-cl;
+        }
+        
+        &::after{
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    .swiper-button-prev{
+        left: -30px;
+        transform: translate(-100% , -50%);
+        &::after{
+            margin-right: 3px;
+        }
+    }
+
+    .swiper-button-next{
+        right: -30px;
+        transform: translate(100% , -50%);
+        &::after{
+            margin-left: 2px;
+        }
+
+    }
+
+    .about-inner {
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 30px;
+
+        &:hover {
+            .about-title {
+                color: $main-cl-2;
+            }
+
+            .about-img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .about-img {
+        display: block;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        img {
+            transition: all .3s ease;
+        }
+    }
+
+    .about-title {
+        margin-bottom: 15px;
+        display: block;
+        transition: all .3s ease;
+
+    }
+
+    .about-item {
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+
+        display: flex;
+        align-items: center;
+
+        .about-icon {
+            flex-shrink: 0;
+            padding-right: 20px;
+        }
+    }
+
+    .about-link {
+        transition: all .3s ease;
+
+        &:hover {
+            color: $main-cl-2;
+        }
+    }
+
+
+
+
+}

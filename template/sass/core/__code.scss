@@ -14,7 +14,69 @@
     font-weight: 600;
 }
 
-.btn{
-   
+.sec-box{
+    border: 1px solid rgba($color: $b-cl, $alpha: .1);
+    position: relative;
+    &:hover{
+        .sec-tt{
+            color: $main-cl-2;
+        }
+
+        .sec-img{
+            img{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .sale{
+        color: $w-cl;
+        background-color: $main-cl-2;
+        font-weight: bold;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        padding: 5px 13px 5px 7px;
+        line-height: 1.1;
+        z-index: 1;
+        clip-path: polygon(0 0, 100% 0, 78% 100%, 0% 100%);
+    }
+
+    .bestsel{
+        position: absolute;
+        top: 38px;
+        left: 0;
+        z-index: 1;
+        color: $w-cl;
+        background-color: $main-cl;
+        padding: 5px 15px 5px 7px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.1;
+        clip-path: polygon(0 0, 100% 0, 82% 100%, 0% 100%);
+    }
+
+    .sec-img{
+        padding: 25px 37px 20px;
+        display: block;
+        img{
+            transition: all .3s ease;
+        }
+    }
+
+    .sec-content{
+        padding: 9px 0 20px;
+        margin: 0 18px;
+        border-top: 1px solid rgba($color: $b-cl, $alpha: .1);
+    }
+
+    .sec-tt{
+        transition:  all .3s ease;
+        margin-bottom: 5px;
+    }
+
+    .sec-desc{
+        @include line-clamp(2);
+    }
 }
 

@@ -116,14 +116,14 @@ export default function SlideModule() {
         } catch (err) {
             console.log(err);
         }
-    })
+    });
 
     document.querySelectorAll('.swiper-row').forEach(el => {
         const slider = el.querySelector('.swiper');
         const pagination = el.querySelector('.swiper-pagination');
         const prevBtn = el.querySelector('.swiper-button-prev');
         const nextBtn = el.querySelector('.swiper-button-next');
-        
+
         try {
             new Swiper(slider, {
                 speed: 1200,
@@ -155,19 +155,81 @@ export default function SlideModule() {
                     320: {
                         spaceBetween: 15,
                     },
-                   
+
                     1024: {
                         slidesPerView: 5,
                         spaceBetween: 30,
                     }
                 }
-               
+
 
             });
         } catch (err) {
             console.log(err);
         }
     })
+
+    document.querySelectorAll('.swiper-con').forEach(el => {
+        const slider = el.querySelector('.swiper');
+        const pagination = el.querySelector('.swiper-pagination');
+        const prevBtn = el.querySelector('.swiper-prev');
+        const nextBtn = el.querySelector('.swiper-next');
+
+        //not slide
+        const touchMove = el.querySelector('.notslides');
+        if (touchMove) {
+            var notSlide = false;
+        } else {
+            var notSlide = true;
+        }
+
+        //pagi dynamic
+        const pagiDynamic = el.querySelector('.dynamics');
+        if (pagiDynamic) {
+            var dynamic = true;
+        } else {
+            var dynamic = false;
+        }
+
+        //loop
+        const slideLoop = el.querySelector('.nots-loop');
+        if (slideLoop) {
+            var loops = false;
+        } else {
+            var loops = true;
+        }
+
+        try {
+            new Swiper(slider, {
+                speed: 1200,
+                slidesPerView: 'auto',
+                autoHeight: false,
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
+                loop: loops,
+                allowTouchMove: notSlide,
+
+                // autoplay: {
+                //     delay: 4000,
+                // },
+
+                pagination: {
+                    el: pagination,
+                    clickable: true,
+                    dynamicBullets: dynamic,
+                },
+
+                navigation: {
+                    nextEl: nextBtn,
+                    prevEl: prevBtn,
+                },
+
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    });
 
 
     if (document.querySelector('.swiper-demo')) {

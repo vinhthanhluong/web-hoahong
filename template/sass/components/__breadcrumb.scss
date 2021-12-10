@@ -7,8 +7,9 @@
 
     .breadcrumb-menu {
         display: flex;
-        border-bottom: 1px solid $main-cl;
-        padding: 10px 0;
+        padding: 10px 0 0;
+        align-items: center;
+        justify-content: center;
 
         @include max-media($bk-576) {
             overflow-x: scroll;
@@ -19,23 +20,23 @@
         .breadcrumb-list {
             &:not(:first-child) {
                 &::before {
-                    content: '\f111 ';
-                    font-family: "Fontawesome";
-                    font-size: 8px;
-                    color:  red;
+                    // content: '\f111 ';
+                    content: '/';
+                    // font-family: "Fontawesome";
+                    // font-size: 14px;
                     padding-right: 8px;
+                    @include fz-16;
                 }
 
                 padding-left: 12px;
             }
 
             &.current{
-                color: $main-cl;
+                // color: $main-cl;
             }
 
             a {
-                font-size: 15px;
-                font-weight: bold;
+                @include fz-16;
                 transition: all .3s ease;
 
                 @include max-media($bk-d-768) {

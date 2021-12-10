@@ -19,17 +19,17 @@
         }
         
         .header-full{
-            transform: translateY(100%);
+            transform: translateY(-100%);
             @include hidden;
             // display: none;
             position: absolute;
             width: 100%;
+            z-index: -1;
         }
     }
 
     &.--fix-menu{
         .header-full{
-            position: static;
             transform: translateY(0);
             @include visible;
             // display: block;

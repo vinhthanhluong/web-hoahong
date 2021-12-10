@@ -165,7 +165,6 @@
 }
 
 .section-support {
-    padding: 40px 0;
     overflow: hidden;
 
     .sp-head {
@@ -269,15 +268,13 @@
 }
 
 .section-product {
-    padding: 40px 0;
-
-    .sp-head {
+    .sec-head {
         background-color: $g-F2F2-cl;
         border-radius: 10px 10px 0 0;
         height: 43px;
         position: relative;
 
-        .sp-tx {
+        .sec-tx {
             background-color: $main-cl;
             display: inline-block;
             padding: 15px 10px 14px 28px;
@@ -306,6 +303,89 @@
 
         .title {
             line-height: 1.2;
+        }
+    }
+
+    .sec-pagination{
+        position: absolute;
+        top: 50%;
+        right:30px;
+        transform: translateY(-50%);
+
+        .pagi{
+            display: flex;
+            align-items: center;
+        }
+
+        .arrow-prev{
+            transform: rotate(-180deg);
+            margin-right: 6px;
+            opacity: .3;
+        }
+    }
+
+    .cols {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col {
+        &.tx {
+            width: calc(100% / 5);
+        }
+
+        &.txt {
+            width: calc(100% / 5 * 4);
+        }
+    }
+
+    .sec-list {
+        padding: 18px 26px;
+        background-color: $g-F2F2-cl;
+        height: 100%;
+    }
+
+    .sec-item {
+        padding: 12px 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:not(:first-child) {
+            border-top: 1px solid $g-E5E5-cl;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 2.5px 0 2.5px 5px;
+            border-color: transparent transparent transparent $main-cl;
+            padding-right: 10px;
+        }
+
+        &.active{
+            color: $main-cl-2
+        }
+    }
+
+    .sec-link {
+        @include fz-16;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all .3s ease;
+        width: 100%;
+        &:hover{
+            color: $main-cl-2;
+        }
+
+
+    }
+
+    .sec-product{
+        .col{
+            width: calc(100% / 4);
         }
     }
 }
@@ -589,9 +669,9 @@
     .news-ig {
         position: relative;
 
-        &:hover{
-            .content{
-                .news-link{
+        &:hover {
+            .content {
+                .news-link {
                     color: $main-cl;
                 }
             }
@@ -604,35 +684,38 @@
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         border-radius: 10px;
         overflow: hidden;
+
         &::before {
             content: '';
             @include pos-full;
             background: linear-gradient(1.26deg, rgba(0, 0, 0, 0.6) 22.07%, rgba(155, 203, 74, 0) 54.83%);
         }
-        img{
+
+        img {
             border-radius: 10px;
         }
     }
 
-    .content{
+    .content {
         position: absolute;
         bottom: 30px;
         left: 30px;
         right: 30px;
         color: $w-cl;
-        
 
-        .news-link{
+
+        .news-link {
             margin-bottom: 10px;
             display: flex;
             line-height: 1.3;
-            transition:  all .3s ease;
+            transition: all .3s ease;
         }
 
-        .date{
+        .date {
             display: flex;
             align-items: center;
-            img{
+
+            img {
                 margin-right: 10px;
             }
         }
