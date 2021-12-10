@@ -6,20 +6,45 @@
     .column {
         &.it {
             width: calc(100% /12 * 4);
+            @include max-media($bk-d-1200){
+                width: calc(100% / 12 * 3);
+            }
+            @include max-media($bk-d-992){
+                width: 50%;
+            }
+            @include max-media($bk-d-768){
+             width: 100%;   
+            }
         }
 
         &.txt {
             width: calc(100% / 12 * 5);
+            @include max-media($bk-d-992){
+                width: 50%;
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
         &.if {
             width: calc(100% / 12 * 3);
+            @include max-media($bk-d-1200){
+                width: calc(100% / 12 * 4);
+            }
+            @include max-media($bk-d-992){
+                width: 100%;
+            }
+          
         }
     }
 
     .logo {
         margin-bottom: 10px;
         display: block;
+        @include max-media($bk-d-1200){
+            max-width: 60%;
+        }
     }
 
     .desc {
@@ -47,6 +72,12 @@
 
     .ft-title {
         margin-bottom: 20px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
+        @include max-media($bk-d-768){
+            margin-bottom: 10px;
+        }
     }
 
     .ft-item {
@@ -54,6 +85,9 @@
 
         &:not(:first-child) {
             padding-top: 15px;
+            @include max-media($bk-d-1200){
+                padding-top: 10px;
+            }
         }
 
         &.active {
@@ -69,8 +103,18 @@
         }
     }
 
+    .fanspage{
+        // width: 100%;
+        // iframe{
+        //     width: 100%;
+        // }
+    }
+
     .ft-email {
         margin-top: 40px;
+        @include max-media($bk-d-1200){
+            margin-top: 30px;
+        }
 
         .f-email {
             position: relative;

@@ -21,4 +21,17 @@ export default function FileActiveModule() {
         }
         );
     }
+
+    if ($('.header-mobi-cata').length) {
+        const width = $(window).width();
+        
+        if (width < 1200) {
+            $('.header-catalog').appendTo('.header-mobi-cata');
+        }
+
+        if (width < 768) {
+            $('.header-mobi-cata').appendTo('.header-right');
+        }
+        
+    }
 }

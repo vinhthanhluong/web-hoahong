@@ -1,6 +1,5 @@
 .catalog-sp {
     overflow: hidden;
-
     &.catalog-sp-2 {
         .cata-inner {
             padding: 13px 32px 13px 80px;
@@ -36,12 +35,42 @@
         padding: 61px 32px 61px 80px;
         position: relative;
         z-index: 1;
+        @include max-media($bk-d-1900){
+            padding: 50px 20px 50px;
+        }
+        @include max-media($bk-d-1440){
+            padding: 40px 20px;
+        }
+        @include max-media($bk-d-1200){
+            padding: 30px 10px;
+        }
 
         &::before {
             content: '';
             @include pos-full;
             background: linear-gradient(79.66deg, rgba(0, 0, 0, 0.3) 22.46%, rgba(0, 0, 0, 0) 55.73%);
             z-index: -1;
+        }
+    }
+    .content{
+        @include max-media($bk-d-1900){
+            width: 50%;
+        }
+    }
+
+    .cata-ig{
+        @include max-media($bk-d-1900){
+            width: 50%;
+        }
+
+        img{
+            @include max-media($bk-d-1900){
+                width: 80%;
+                margin-left: auto;
+            }
+            @include max-media($bk-d-1440){
+                width: 90%;
+            }
         }
     }
 
@@ -51,20 +80,29 @@
 
     .title {
         margin-bottom: 13px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 7px;
+        }
     }
 
     .btn-more-r {
         padding: 12px 24px;
+        @include max-media($bk-d-1200){
+            padding: 10px 15px;
+        }
 
         img {
             margin-left: 25px;
+            @include max-media($bk-d-1200){
+                margin-left: 15px;
+            }
         }
     }
 }
 
 .cate-home {
     overflow: hidden;
-
+    display: none;
     .column {
         width: calc(100%/ 4);
         position: relative;
@@ -108,7 +146,7 @@
     background-color: $main-cl;
     padding: 40px 0 90px;
     overflow: hidden;
-
+    display: none;
     .title {}
 
     .swiper-row {
@@ -166,7 +204,7 @@
 
 .section-support {
     overflow: hidden;
-
+    display: none;
     .sp-head {
         background-color: $g-F2F2-cl;
         border-radius: 10px 10px 0 0;
@@ -268,6 +306,8 @@
 }
 
 .section-product {
+    overflow: hidden;
+    display: none;
     .sec-head {
         background-color: $g-F2F2-cl;
         border-radius: 10px 10px 0 0;
@@ -394,7 +434,7 @@
     padding: 142px 0;
     overflow: hidden;
     position: relative;
-
+    display: none;
     .img-order {
         position: absolute;
         top: 0%;
@@ -455,6 +495,8 @@
 }
 
 .about-home {
+    overflow: hidden;
+    display: none;
     .column {
         width: 50%;
     }
@@ -518,7 +560,7 @@
     background-repeat: no-repeat;
     padding: 129px 0;
     overflow: hidden;
-
+    display: none;
     .columns {
         align-items: center;
     }
@@ -568,7 +610,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    display: none;
     .container-full {
         padding: 0;
     }
@@ -662,6 +704,8 @@
 }
 
 .news-home {
+    overflow: hidden;
+    display: none;
     .column {
         width: 50%;
     }
