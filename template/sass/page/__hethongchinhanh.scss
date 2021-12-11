@@ -5,19 +5,31 @@
         padding-bottom: 40px;
         .column {
             width: 50%;
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
 
     .img{
         border-radius: 10px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        height: 100%;
         img{
             border-radius: 10px;
+            height: 100%;
         }
     }
 
     .title{
         margin-bottom: 30px;
+        line-height: 1.2;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+        }
     }
 
     .desc{
@@ -27,14 +39,23 @@
 
     .btn-more-r{
         padding: 12px 24px;
+        @include max-media($bk-d-992){
+            padding: 10px 15px;
+        }
         img{
             margin-left: 25px;
+            @include max-media($bk-d-992){
+                margin-left: 10px;
+            }
         }
     }
 
     .system-map{
         .column{
             width: calc(100% / 3);
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
 
@@ -48,6 +69,14 @@
         align-items: center;
         justify-content: center;
         height: 100%;
+        @include max-media($bk-d-992){
+            padding: 15px;
+        }
+        @include max-media($bk-d-768){
+            justify-content: flex-start;
+            padding: 20px;
+        }
+       
 
         &:hover{
             .system-cont{
@@ -78,6 +107,12 @@
         border-radius: 10px;
         overflow: hidden;
         height: 454px;
+        @include max-media($bk-d-992){
+            height: 350px;
+        }
+        @include max-media($bk-576){
+            height: 300px;
+        }
         iframe{
             width: 100%;
             height: 100%;

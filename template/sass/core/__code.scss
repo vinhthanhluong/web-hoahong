@@ -59,6 +59,12 @@
     .sec-img{
         padding: 25px 37px 20px;
         display: block;
+        @include max-media($bk-d-1200){
+            padding: 20px 30px;
+        }
+        @include max-media($bk-d-768){
+            padding: 15px 20px;
+        }
         img{
             transition: all .3s ease;
         }
@@ -68,6 +74,10 @@
         padding: 9px 0 20px;
         margin: 0 18px;
         border-top: 1px solid rgba($color: $b-cl, $alpha: .1);
+        @include max-media($bk-d-768){
+            padding: 9px 0 15px;
+            margin: 0 15px;
+        }
     }
 
     .sec-tt{

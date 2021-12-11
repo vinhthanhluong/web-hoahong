@@ -1,8 +1,21 @@
 .catalog-sp {
     overflow: hidden;
+
     &.catalog-sp-2 {
         .cata-inner {
             padding: 13px 32px 13px 80px;
+
+            @include max-media($bk-d-1900) {
+                padding: 27px 20px;
+            }
+
+            @include max-media($bk-d-1440) {
+                padding: 25px 20px;
+            }
+
+            @include max-media($bk-d-1200) {
+                padding: 26px 10px;
+            }
 
             &::before {
                 display: none;
@@ -23,6 +36,10 @@
         width: calc(100% /3);
         padding: 0;
 
+        @include max-media($bk-d-992) {
+            width: 100%;
+        }
+
     }
 
     .cata-inner {
@@ -35,13 +52,16 @@
         padding: 61px 32px 61px 80px;
         position: relative;
         z-index: 1;
-        @include max-media($bk-d-1900){
+
+        @include max-media($bk-d-1900) {
             padding: 50px 20px 50px;
         }
-        @include max-media($bk-d-1440){
-            padding: 40px 20px;
+
+        @include max-media($bk-d-1440) {
+            padding: 40px 20px 40px;
         }
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             padding: 30px 10px;
         }
 
@@ -52,26 +72,20 @@
             z-index: -1;
         }
     }
-    .content{
-        @include max-media($bk-d-1900){
-            width: 50%;
+
+    .content {
+        @include max-media($bk-d-1900) {
+            width: 60%;
+            padding-right: 10px;
         }
     }
 
-    .cata-ig{
-        @include max-media($bk-d-1900){
-            width: 50%;
+    .cata-ig {
+        @include max-media($bk-d-1900) {
+            width: 40%;
         }
 
-        img{
-            @include max-media($bk-d-1900){
-                width: 80%;
-                margin-left: auto;
-            }
-            @include max-media($bk-d-1440){
-                width: 90%;
-            }
-        }
+        img {}
     }
 
     .label {
@@ -80,21 +94,24 @@
 
     .title {
         margin-bottom: 13px;
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             margin-bottom: 7px;
         }
     }
 
     .btn-more-r {
         padding: 12px 24px;
-        @include max-media($bk-d-1200){
+
+        @include max-media($bk-d-1200) {
             padding: 10px 15px;
         }
 
         img {
             margin-left: 25px;
-            @include max-media($bk-d-1200){
-                margin-left: 15px;
+
+            @include max-media($bk-d-1200) {
+                margin-left: 10px;
             }
         }
     }
@@ -102,10 +119,22 @@
 
 .cate-home {
     overflow: hidden;
-    display: none;
+
     .column {
         width: calc(100%/ 4);
         position: relative;
+
+        @include max-media($bk-d-768) {
+            width: calc(100% / 2);
+        }
+
+        &:nth-child(3) {
+            &::before {
+                @include max-media($bk-d-768) {
+                    display: none;
+                }
+            }
+        }
 
         &::before {
             content: '';
@@ -144,10 +173,24 @@
 
 .brand-famous {
     background-color: $main-cl;
-    padding: 40px 0 90px;
+    padding: 40px 0 60px;
     overflow: hidden;
-    display: none;
-    .title {}
+
+    @include max-media($bk-d-1440) {
+        padding-bottom: 40px;
+    }
+
+    @include max-media($bk-d-1200) {
+        padding-bottom: 30px;
+    }
+
+    @include max-media($bk-d-992) {
+        padding-bottom: 10px;
+    }
+
+    .title {
+        line-height: 1.2;
+    }
 
     .swiper-row {
         position: relative;
@@ -155,6 +198,10 @@
 
     .swiper {
         padding: 30px 0;
+
+        @include max-media($bk-d-992) {
+            padding-top: 20px;
+        }
     }
 
     .swiper-button-prev,
@@ -173,11 +220,19 @@
     .swiper-button-prev {
         left: -30px;
         transform: translate(-100%, -50%);
+
+        @include max-media($bk-d-1440) {
+            left: -15px;
+        }
     }
 
     .swiper-button-next {
         right: -30px;
         transform: translate(100%, -50%);
+
+        @include max-media($bk-d-1440) {
+            right: -15px;
+        }
     }
 
 
@@ -198,13 +253,14 @@
 
         img {
             transition: all .3s ease;
+            margin: 0 auto;
         }
     }
 }
 
 .section-support {
     overflow: hidden;
-    display: none;
+
     .sp-head {
         background-color: $g-F2F2-cl;
         border-radius: 10px 10px 0 0;
@@ -220,8 +276,20 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: calc(100% / 5);
+            min-width: calc(100% / 5);
             height: 50px;
+            @include max-media($bk-d-1200){
+                padding: 15px;
+            }
+            @include max-media($bk-d-992){
+                min-width: calc(100% / 4);
+            }
+            @include max-media($bk-d-768){
+                min-width: calc(100% / 3);
+            }
+            @include max-media($bk-576){
+                min-width: calc(100% / 2);
+            }
 
             &::after {
                 content: '';
@@ -245,6 +313,15 @@
 
     .swiper-slide {
         width: calc(100% / 5);
+        @include max-media($bk-d-992){
+            width: calc(100% / 4);
+        }
+        @include max-media($bk-d-768){
+            width: calc(100% / 3);
+        }
+        @include max-media($bk-576){
+            width: calc(100% / 2);
+        }
     }
 
     .sp-inner {
@@ -271,7 +348,10 @@
         margin-bottom: 19px;
         border-bottom: 1px solid rgba($color: $b-cl, $alpha: .1);
         padding-bottom: 18px;
-
+        @include max-media($bk-d-992){
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
         img {
             border-radius: 10px;
         }
@@ -284,6 +364,9 @@
         @include fz-18;
         text-transform: uppercase;
         margin-bottom: 9px;
+        @include max-media($bk-d-992){
+            margin-bottom: 5px;
+        }
 
         span {
             display: block;
@@ -294,6 +377,9 @@
         margin-bottom: 10px;
         color: $main-cl;
         font-weight: bold;
+        @include max-media($bk-d-992){
+            margin-bottom: 5px;
+        }
     }
 
 
@@ -307,7 +393,7 @@
 
 .section-product {
     overflow: hidden;
-    display: none;
+
     .sec-head {
         background-color: $g-F2F2-cl;
         border-radius: 10px 10px 0 0;
@@ -317,14 +403,17 @@
         .sec-tx {
             background-color: $main-cl;
             display: inline-block;
-            padding: 15px 10px 14px 28px;
+            padding: 15px 28px 14px 28px;
             color: $w-cl;
             border-radius: 10px 0 0;
             position: absolute;
             bottom: 0;
             left: 0;
-            width: calc(100% / 5);
+            min-width: calc(100% / 5);
             height: 50px;
+            @include max-media($bk-d-1200){
+                padding: 15px;
+            }
 
             &::after {
                 content: '';
@@ -346,18 +435,21 @@
         }
     }
 
-    .sec-pagination{
+    .sec-pagination {
         position: absolute;
         top: 50%;
-        right:30px;
+        right: 30px;
         transform: translateY(-50%);
+        @include max-media($bk-d-1200){
+            right: 15px;
+        }
 
-        .pagi{
+        .pagi {
             display: flex;
             align-items: center;
         }
 
-        .arrow-prev{
+        .arrow-prev {
             transform: rotate(-180deg);
             margin-right: 6px;
             opacity: .3;
@@ -372,10 +464,28 @@
     .col {
         &.tx {
             width: calc(100% / 5);
+            @include max-media($bk-d-992){
+                width: calc(100% / 4 );
+            }
+            @include max-media($bk-d-768){
+                width: calc(100% / 3);
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
 
         &.txt {
             width: calc(100% / 5 * 4);
+            @include max-media($bk-d-1200){
+                width: calc(100% / 4 * 3);
+            }
+            @include max-media($bk-d-768){
+                width: calc(100% / 3 * 2);
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
     }
 
@@ -383,6 +493,9 @@
         padding: 18px 26px;
         background-color: $g-F2F2-cl;
         height: 100%;
+        @include max-media($bk-d-1200){
+            padding: 5px 15px 5px;
+        }
     }
 
     .sec-item {
@@ -390,6 +503,10 @@
         position: relative;
         display: flex;
         align-items: center;
+        @include max-media($bk-d-1200){
+            padding: 10px 0;
+        }
+
         &:not(:first-child) {
             border-top: 1px solid $g-E5E5-cl;
         }
@@ -405,7 +522,7 @@
             padding-right: 10px;
         }
 
-        &.active{
+        &.active {
             color: $main-cl-2
         }
     }
@@ -416,16 +533,23 @@
         font-weight: bold;
         transition: all .3s ease;
         width: 100%;
-        &:hover{
+
+        &:hover {
             color: $main-cl-2;
         }
 
 
     }
 
-    .sec-product{
-        .col{
+    .sec-product {
+        .col {
             width: calc(100% / 4);
+            @include max-media($bk-d-992){
+                width: calc(100% / 3);
+            }
+            @include max-media($bk-d-768){
+                width: calc(100% / 2);
+            }
         }
     }
 }
@@ -434,18 +558,44 @@
     padding: 142px 0;
     overflow: hidden;
     position: relative;
-    display: none;
+
+    @include max-media($bk-d-1900) {
+        padding: 100px 0;
+    }
+
+    @include max-media($bk-d-1440) {
+        padding: 80px 0;
+    }
+
+    @include max-media($bk-d-1200) {
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992) {
+        padding: 40px 0;
+    }
+    @include max-media($bk-576){
+        padding: 30px 0;
+    }
+
     .img-order {
         position: absolute;
         top: 0%;
         bottom: 0;
         left: 0;
         height: 100%;
-        width: 80%;
+        width: 67%;
+        @include max-media($bk-d-768){
+            width: 68%;
+        }
+        @include max-media($bk-576){
+            width: 100%;
+        }
 
         img {
             height: 100%;
         }
+
     }
 
     .bg-order {
@@ -461,6 +611,11 @@
             max-width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        @include max-media($bk-576){
+            // display: none;
+            width: 150%;
+
         }
     }
 
@@ -478,33 +633,69 @@
     .label {
         margin-bottom: 20px;
         line-height: 1.2;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
+        @include max-media($bk-d-768){
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        @include max-media($bk-576){
+            font-size: 16px;
+        }
     }
 
     .title {
         line-height: 1.2;
+        @include max-media($bk-d-768){
+            font-size: 22px;
+        }
+        @include max-media($bk-576){
+            font-size: 20px;
+        }
     }
 
     .btn-more-m {
         padding: 12px 24px;
         margin-top: 30px;
-
+        @include max-media($bk-d-1200){
+            margin-top: 20px;
+        }
+        @include max-media($bk-d-992){
+            padding: 10px 15px;
+        }
+        @include max-media($bk-d-768){
+            margin-top: 10px;
+        }
         img {
             margin-left: 25px;
+            @include max-media($bk-d-768){
+                margin-left: 10px;
+            }
         }
     }
 }
 
 .about-home {
     overflow: hidden;
-    display: none;
+
     .column {
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
     }
 
     .title {
         margin-bottom: 30px;
         line-height: 1.2;
         position: relative;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+        }
 
         &::after {
             content: '';
@@ -534,22 +725,39 @@
         line-height: 1.5;
         margin-bottom: 30px;
         @include line-clamp(5);
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+        }
     }
 
     .btn-more-r {
         padding: 12px 24px;
+        @include max-media($bk-d-992){
+            padding: 10px 15px;
+        }
 
         img {
             margin-left: 20px;
+            @include max-media($bk-d-992){
+                margin-left: 10px;
+            }
         }
     }
 
     .about-ig {
         border-radius: 50px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
-
+        @include max-media($bk-d-992){
+            border-radius: 20px;
+        }
         img {
             border-radius: 50px;
+            @include max-media($bk-d-992){
+                border-radius: 20px;
+            }
         }
     }
 }
@@ -560,7 +768,18 @@
     background-repeat: no-repeat;
     padding: 129px 0;
     overflow: hidden;
-    display: none;
+    @include  max-media($bk-d-1440){
+        padding: 80px 0;
+    }
+
+    @include max-media($bk-d-1200){
+        padding: 60px 0;
+    }
+
+    @include max-media($bk-d-992){
+        padding: 40px 0;
+    }
+
     .columns {
         align-items: center;
     }
@@ -568,10 +787,22 @@
     .column {
         &.txt {
             width: calc(100% / 12 * 4);
+            @include max-media($bk-d-768){
+                width: calc(100% / 12 * 5);
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
 
         &.ig {
             width: calc(100% / 12 * 8);
+            @include max-media($bk-d-768){
+                width: calc(100% / 12 * 7);
+            }
+            @include max-media($bk-576){
+                width: 100%;
+            }
         }
     }
 
@@ -579,15 +810,33 @@
         line-height: 1.2;
         margin-bottom: 30px;
         color: $w-cl;
-        max-width: 332px;
+        @include max-media($bk-d-992){
+            margin-bottom: 20px;
+        }
+        @include max-media($bk-576){
+            margin-bottom: 10px;
+        }
+
+        span{
+            display: block;
+            @include max-media($bk-576){
+                display: inline;
+            }
+        }
 
     }
 
     .btn-more-r {
         padding: 12px 24px;
+        @include max-media($bk-d-992){
+            padding: 10px 15px;
+        }
 
         img {
             margin-left: 25px;
+            @include max-media($bk-d-992){
+                margin-left: 10px;
+            }
         }
 
     }
@@ -596,10 +845,16 @@
         display: flex;
         align-items: center;
         margin: -15px;
+        @include max-media($bk-d-992){
+            margin: -7.5px;
+        }
     }
 
     .img {
-        padding: 15px;
+        padding: 15px;  
+        @include max-media($bk-d-992){
+            padding: 7.5px;
+        }
     }
 
 
@@ -610,7 +865,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+
     .container-full {
         padding: 0;
     }
@@ -618,6 +873,15 @@
     .request-wrap-ig {
         position: relative;
         padding: 118px 0 44px;
+        @include max-media($bk-d-1440){
+            padding: 80px 0 40px;
+        }
+        @include max-media($bk-d-1200){
+            padding: 60px 0 40px;
+        }
+        @include max-media($bk-d-992){
+            padding: 40px 0;
+        }
 
     }
 
@@ -630,6 +894,9 @@
 
     .title {
         margin-bottom: 30px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
     }
 
     .f-group {
@@ -638,6 +905,9 @@
         justify-content: space-between;
 
         margin: -15px -7.5px;
+        @include max-media($bk-576){
+            margin: -7.5px;
+        }
 
     }
 
@@ -647,6 +917,10 @@
 
         &.w-50 {
             width: 50%;
+            @include max-media($bk-576){
+                width: 100%;
+                padding: 7.5px;
+            }
         }
     }
 
@@ -674,6 +948,13 @@
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
         cursor: pointer;
         margin: 30px auto 0;
+        @include max-media($bk-d-1200){
+            margin-top: 20px;
+        }
+        @include max-media($bk-576){
+            padding: 10px 15px;
+            margin-top: 10px;
+        }
 
         img {
             margin-left: 25px;
@@ -684,35 +965,61 @@
         position: absolute;
         top: 0%;
         bottom: 0;
-
+        @include max-media($bk-d-1440){
+            transform: scale(0.7);
+        }
+        @include max-media($bk-d-1200){
+            opacity: .7;
+        }
+        @include max-media($bk-576){
+            transform: scale(0.5);
+        }
         img {
             height: 100%;
             object-fit: cover;
             width: 100%;
+            @include max-media($bk-576){
+                height: auto;
+            }
+            
         }
     }
 
     .img-lf {
         left: 0;
         top: 10px;
-
+        @include max-media($bk-d-1440){
+            transform-origin: left bottom;
+        }
     }
 
     .img-rt {
         right: 10%;
+        @include max-media($bk-d-1900){
+            right: 0;
+        }
+        @include max-media($bk-d-1440){
+            transform-origin: right;
+        }
+        @include max-media($bk-d-1200){
+            transform-origin: right top;
+        }
     }
 }
 
 .news-home {
     overflow: hidden;
-    display: none;
+
     .column {
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
     }
 
     .news-ig {
         position: relative;
-
+        height: 100%;
         &:hover {
             .content {
                 .news-link {
@@ -728,7 +1035,7 @@
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         border-radius: 10px;
         overflow: hidden;
-
+        height: 100%;
         &::before {
             content: '';
             @include pos-full;
@@ -737,6 +1044,7 @@
 
         img {
             border-radius: 10px;
+            height: 100%;
         }
     }
 
@@ -746,6 +1054,16 @@
         left: 30px;
         right: 30px;
         color: $w-cl;
+        @include max-media($bk-d-992){
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+        }
+        @include max-media($bk-576){
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+        }
 
 
         .news-link {
@@ -753,6 +1071,7 @@
             display: flex;
             line-height: 1.3;
             transition: all .3s ease;
+            @include line-clamp(2);
         }
 
         .date {
@@ -771,11 +1090,17 @@
 
     .news-list {
         margin-top: 30px;
+        @include max-media($bk-d-1200){
+            margin-top: 15px;
+        }
     }
 
     .news-item {
         &:not(:first-child) {
             margin-top: 30px;
+            @include max-media($bk-d-1200){
+                margin-top: 15px;
+            }
         }
 
         display: flex;
@@ -791,18 +1116,25 @@
     .item-date {
         background-color: $main-cl;
         color: $w-cl;
-        padding: 15px 20px;
+        // padding: 15px 20px;
+        @include flex-mid;
+        flex-direction: column;
         border-radius: 10px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         text-align: center;
         width: 70px;
         height: 70px;
         flex-shrink: 0;
+        @include max-media($bk-d-992){
+            width: 60px;
+            height: 60px;
+        }
     }
 
     .item-tt {
         transition: all .3s ease;
         line-height: 1.2;
         padding-left: 10px;
+        @include line-clamp(2);
     }
 }

@@ -12,8 +12,11 @@
         justify-content: center;
 
         @include max-media($bk-576) {
-            overflow-x: scroll;
+            overflow-x: auto;
             white-space: nowrap;
+            @include custom-horizontal-scrollbar(2px);
+            justify-content: flex-start;
+            padding-bottom: 10px;
         }
 
 

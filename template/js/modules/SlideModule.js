@@ -154,9 +154,17 @@ export default function SlideModule() {
                 breakpoints: {
                     320: {
                         spaceBetween: 15,
+                        slidesPerView: 2,
                     },
-
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
                     1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                    1200: {
                         slidesPerView: 5,
                         spaceBetween: 30,
                     }

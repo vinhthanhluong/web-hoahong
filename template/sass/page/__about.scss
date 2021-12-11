@@ -2,6 +2,20 @@
     background-color: $g-F2F2-cl;
     margin: -160px 0 0;
 
+    @include max-media($bk-d-1200) {
+        margin: -100px 0 0;
+    }
+
+    @include max-media($bk-d-992) {
+        margin: -70px 0 0;
+    }
+
+    @include max-media($bk-d-768) {
+        margin: 0;
+        padding-top: 40px;
+        padding: 40px 0;
+    }
+
     .columns {
         margin: 0;
     }
@@ -9,14 +23,33 @@
     .column {
         width: 50%;
         padding: 0;
+
+        @include max-media($bk-d-768) {
+            width: 100%;
+        }
+    }
+
+    .about-wrapper {
+        // border-radius: 20px 20px 0 0;
+        // overflow: hidden;
+        // @include max-media($bk-d-768){
+        //     border-radius: 20px;
+        // }
     }
 
     .about-ig {
         border-radius: 0 20px 0 0;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        height: 100%;
+        overflow: hidden;
+
+        @include max-media($bk-d-768) {
+            border-radius: 0 0 20px 20px;
+        }
 
         img {
-            border-radius: 0 20px 0 0;
+            // border-radius: 0 20px 0 0;
+            height: 100%;
         }
     }
 
@@ -25,11 +58,31 @@
         background-color: $w-cl;
         border-radius: 20px 0 0 0;
         height: 100%;
+
+        @include max-media($bk-d-1200) {
+            padding: 30px;
+        }
+
+        @include max-media($bk-d-992) {
+            padding: 20px;
+        }
+
+        @include max-media($bk-d-768) {
+            border-radius: 20px 20px 0 0;
+        }
     }
 
     .title {
         text-align: center;
         margin-bottom: 30px;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 15px;
+        }
+
+        @include max-media($bk-d-992) {
+            margin-bottom: 5px;
+        }
     }
 
     .desc {
@@ -49,6 +102,14 @@
 
     .about-b {
         margin-top: 20px;
+
+        @include max-media($bk-d-1200) {
+            margin-top: 15px;
+        }
+
+        @include max-media($bk-d-992) {
+            margin-top: 10px;
+        }
     }
 }
 
@@ -65,24 +126,42 @@
     .column {
         width: 50%;
         padding: 0;
+
+        @include max-media($bk-d-768) {
+            width: 100%;
+        }
     }
 
     .us-inner {
-        padding-left: 30px;
+        // padding-left: 30px;
+        padding: 40px 15px 40px 30px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 15px;
+
+        // padding-right: 15px;
         @include min-media($bk-1200) {
             padding-right: calc((100vw - 1200px) / 2);
+        }
+
+        @include max-media($bk-d-992) {
+            padding: 40px 15px;
         }
     }
 
     .title {
         margin-bottom: 30px;
         text-align: center;
+
+        @include max-media($bk-d-1200) {
+            margin-bottom: 20px;
+        }
+
+        @include max-media($bk-d-992) {
+            margin-bottom: 10px;
+        }
     }
 
     .desc {
@@ -96,17 +175,30 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+
+        @include max-media($bk-d-992) {
+            margin: -7.5px;
+        }
     }
 
     .us-item {
         width: 50%;
         padding: 10px;
         display: flex;
-        align-items: center
+        align-items: center;
+
+        @include max-media($bk-d-992) {
+            padding: 7.5px;
+        }
+
     }
 
     .us-text {
         padding-left: 10px;
+
+        @include max-media($bk-576) {
+            padding-left: 5px;
+        }
     }
 
     .us-tt {
@@ -118,12 +210,14 @@
         // width: 945px;
         position: relative;
         text-align: right;
+        height: 100%;
 
         img {
             // position: absolute;
             // top: 0;
             // right: 0;
-            // transform: translateY(-50%);            
+            // transform: translateY(-50%);         
+            height: 100%;
         }
     }
 
@@ -136,11 +230,21 @@
 .about-system {
     overflow: hidden;
 
-    .swiper-custom{
+    .swiper-custom {
         position: relative;
+
+        &:hover {
+            @include max-media($bk-d-1200) {
+                .swiper-button-next , .swiper-button-prev{
+                    @include visible;
+                }
+            }
+        }
+
+
     }
 
-    .stystem-slide{
+    .stystem-slide {
         overflow: hidden;
 
     }
@@ -148,18 +252,32 @@
     .swiper {
         margin: 0 -15px;
         padding: 25px 0 40px;
+
+        @include max-media($bk-d-992) {
+            margin: 0 -7.5px;
+        }
     }
-    
-    .swiper-wrapper{
+
+    .swiper-wrapper {
         // margin: 0 -15px;
     }
 
     .swiper-slide {
         width: calc(100% / 3);
         padding: 0 15px;
+
+        @include max-media($bk-d-992) {
+            padding: 0 7.5px;
+            width: calc(100% / 2);
+        }
+
+        @include max-media($bk-576) {
+            width: 100%;
+        }
     }
 
-    .swiper-button-prev , .swiper-button-next{
+    .swiper-button-prev,
+    .swiper-button-next {
         width: 30px;
         height: 30px;
         border-radius: 100%;
@@ -168,30 +286,55 @@
         color: $b-cl;
         margin: 0;
         top: 50%;
+        transition: all .3s ease;
 
-        &:hover{
+        @include max-media($bk-d-1200) {
+            @include hidden;
+        }
+
+        &:hover {
             background-color: $main-cl;
             color: $w-cl;
         }
-        
-        &::after{
+
+        &::after {
             font-size: 12px;
             font-weight: bold;
         }
     }
 
-    .swiper-button-prev{
+    .swiper-button-prev {
         left: -30px;
-        transform: translate(-100% , -50%);
-        &::after{
+        transform: translate(-100%, -50%);
+
+        @include max-media($bk-d-1440) {
+            left: -10px;
+        }
+
+        @include max-media($bk-d-1200) {
+            transform: translateY(-50%);
+            left: 10px;
+        }
+
+        &::after {
             margin-right: 3px;
         }
     }
 
-    .swiper-button-next{
+    .swiper-button-next {
         right: -30px;
-        transform: translate(100% , -50%);
-        &::after{
+        transform: translate(100%, -50%);
+
+        @include max-media($bk-d-1440) {
+            right: -10px;
+        }
+
+        @include max-media($bk-d-1200) {
+            transform: translateY(-50%);
+            right: 10px;
+        }
+
+        &::after {
             margin-left: 2px;
         }
 
@@ -202,6 +345,10 @@
         border-radius: 10px;
         overflow: hidden;
         padding: 30px;
+
+        @include max-media($bk-d-1200) {
+            padding: 20px;
+        }
 
         &:hover {
             .about-title {
@@ -221,6 +368,10 @@
         margin-bottom: 30px;
         overflow: hidden;
 
+        @include max-media($bk-d-1200) {
+            margin-bottom: 20px;
+        }
+
         img {
             transition: all .3s ease;
         }
@@ -231,11 +382,19 @@
         display: block;
         transition: all .3s ease;
 
+        @include max-media($bk-d-1200) {
+            margin-bottom: 10px;
+        }
+
     }
 
     .about-item {
         &:not(:first-child) {
             margin-top: 15px;
+
+            @include max-media($bk-d-1200) {
+                margin-top: 10px;
+            }
         }
 
         display: flex;

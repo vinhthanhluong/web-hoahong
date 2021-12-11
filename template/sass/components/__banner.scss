@@ -114,7 +114,7 @@
     .swiper-con {
         max-width: 490px;
         margin: 0 auto;
-		position: relative;
+        position: relative;
 
         .swiper {
             margin: 0 -15px;
@@ -124,21 +124,22 @@
         .swiper-slide {
             width: calc(100% / 4);
             padding: 0 15px;
-			// width: 130px;
+            // width: 130px;
         }
     }
 
     .swiper-next {
-		right: -15px;
-		transform: translate(100% ,-50%);
+        right: -15px;
+        transform: translate(100%, -50%);
+
         &::after {
             background-image: url('../img/svg/icon-right.svg');
         }
     }
 
     .swiper-prev {
-		left: -15px;
-        transform: translate(-100% ,-50%);
+        left: -15px;
+        transform: translate(-100%, -50%);
 
         &::after {
             background-image: url('../img/svg/icon-right.svg');
@@ -150,7 +151,7 @@
     .swiper-prev {
         position: absolute;
         top: 50%;
-		cursor: pointer;
+        cursor: pointer;
 
         &::after {
             content: '';
@@ -162,9 +163,9 @@
 
         }
 
-		&.swiper-button-disabled{
-			opacity: .3;
-		}
+        &.swiper-button-disabled {
+            opacity: .3;
+        }
     }
 
     .img-s {
@@ -177,44 +178,73 @@
         }
     }
 
-	.img-b-item{
-		position: absolute;
-		top: 50%;
-		right: 0;
-		transform: translateY(-50%);
-		z-index: 1;
-	}
+    .img-b-item {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
 
-	&.banners-page , &.banners-eff{
-		text-align: center;
-		padding: 111px 0;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		color: $w-cl;
-		position: relative;
-		&::after{
-			content: '';
-			background-color: rgba($color: $b-cl, $alpha: .6);
-			@include pos-full;
-		}
+    &.banners-page,
+    &.banners-eff {
+        text-align: center;
+        padding: 111px 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: $w-cl;
+        position: relative;
 
-		.banners-wrapper{
-			position: relative;
-			z-index: 1;
-		}
-	}
+        &::after {
+            content: '';
+            background-color: rgba($color: $b-cl, $alpha: .6);
+            @include pos-full;
+        }
 
-	&.banners-eff{
-		padding: 150px 0 300px;
-		.banners-wrapper{
-			max-width: 550px;
-			margin: 0 auto;
-		}
-		.banners-desc{
-			margin-top: 20px;
-			@include fz-16;
-		}
-	}
-    display: none;
+        @include max-media($bk-d-1200) {
+            padding: 80px 0;
+        }
+
+        @include max-media($bk-576) {
+            text-align: left;
+            padding: 60px 0;
+        }
+
+        .banners-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &.banners-eff {
+        padding: 150px 0 300px;
+
+        @include max-media($bk-d-1440) {
+            padding: 100px 0 250px;
+        }
+
+        @include max-media($bk-d-1200) {
+            padding: 80px 0 180px;
+        }
+        @include max-media($bk-d-992){
+            padding: 60px 0 130px;
+        }
+        @include  max-media($bk-d-768){
+            padding: 60px 0;
+        }
+
+        .banners-wrapper {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .banners-desc {
+            margin-top: 20px;
+            @include fz-16;
+            @include max-media($bk-d-768){
+                margin-top: 5px;
+            }
+        }
+    }
 }
