@@ -118,6 +118,9 @@
 
 .header-logo {
     // margin-right: 5px;
+    @include max-media($bk-d-1200){
+        max-width: 70%;
+    }
     @include max-media($bk-d-768){
         max-width: 70%;
     }
@@ -526,12 +529,7 @@
     @include max-media($bk-d-1200) {
         background-color: transparent;
     }
-
-
-    .cols {
-        display: flex;
-
-    }
+    
 }
 
 .header-mobi-cata{
@@ -568,6 +566,9 @@
     &.active {
         .cata-tt {
             border-radius: 10px 10px 0 0;
+            @include max-media($bk-d-1200){
+                border-radius: 0;
+            }
 
         }
 
@@ -588,6 +589,8 @@
         transition: all .3s ease;
         @include max-media($bk-d-1200){
             padding: 10px 20px;
+            border-radius: 0;
+            height: 43px;
         }
         @include max-media($bk-d-768){
             font-size: 0;
@@ -615,6 +618,8 @@
         display: none;
         @include max-media($bk-d-1200){
             padding: 15px;
+            position: relative;
+            transform: translateY(0);
         }
         @include max-media($bk-d-768){
             width: 200px;
@@ -639,6 +644,9 @@
         background-image: url('../img/svg/icon-down.svg');
         background-repeat: no-repeat;
         background-position: right 15px center;
+        @include max-media($bk-d-1200){
+            padding: 10px 15px;
+        }
     }
 
     .btn-search {
@@ -656,7 +664,7 @@
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: 0.16);
         margin: 15px auto 0;
         cursor: pointer;
-        @include max-media($bk-d-992){
+        @include max-media($bk-d-1200){
             padding: 8px 20px;
         }
 
@@ -673,9 +681,9 @@
 }
 
 .header-menu {
-    @include min-media($bk-1200) {
-        width: calc(100% / 12 * 9);
-    }
+    // @include min-media($bk-1200) {
+    //     width: calc(100% / 12 * 9);
+    // }
 
     &-inner {
         .logo-mobile {
@@ -686,6 +694,9 @@
             @include max-media($bk-d-1200) {
                 display: block;
             }
+        }
+        @include min-media($bk-1200){
+            display: flex;
         }
     }
 
@@ -721,6 +732,9 @@
     display: flex;
     // justify-content: center;
     // align-items: center;
+    @include min-media($bk-1200){
+        width: calc(100% / 12 * 9);
+    }
 
     @include max-media($bk-d-1200) {
         display: block;

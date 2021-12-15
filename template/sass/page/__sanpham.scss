@@ -1,0 +1,125 @@
+.product{
+    .column{
+        &.sidebar{
+            width: calc(100% / 12 * 3);
+        }
+
+        &.txt{
+            width: calc(100% / 12 * 9);
+        }
+    }
+
+    .product-search{
+        .label{
+            margin-bottom: 15px;
+        }
+
+        .f-search{
+            position: relative;
+        }
+
+        .f-control{
+            border-radius: 100px;
+            padding: 10px 15px;
+            font-size: 12px;
+            height: auto;
+            font-style: italic;
+            border-color: $main-cl;
+            background-color: $g-F8F8-cl;
+            line-height: 1;
+
+            &::placeholder{
+                opacity: .4;
+            }
+        }
+
+        .f-submit{
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
+            box-shadow: 0px 0px 4px rgba($color: $b-cl, $alpha: .6);
+            background-color: $main-cl-2;
+            position: absolute;
+            top: 50%;
+            right: 3px;
+            transform: translateY(-50%);
+            @include flex-mid;
+        }
+    }
+
+    .product-cata{
+        margin-top: 30px;
+
+        .label{
+            margin-bottom: 15px;
+        }
+
+        .product-item{
+            &:not(:first-child){
+                margin-top: 15px;
+            }
+        }
+
+        .hide-int{
+            display: none;
+            &:checked + .checkmark{
+                .checked{
+                    border-color: $main-cl-2;
+                    img{
+                        @include visible;
+                    }
+                }
+                .text-check{
+                    color: $main-cl-2;
+                }
+            }
+        }
+
+        .checkmark{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .checked{
+            border: 1px solid rgba($color: $b-cl, $alpha: .3);
+            border-radius: 5px;
+            @include flex-mid;
+            width: 15px;
+            height: 15px;
+            transition: all .3s ease;
+
+            img{
+                width: 9px;
+                height: 9px;
+                @include hidden;
+                transition: all .3s ease;
+            }
+        }
+
+        .text-check{
+            @include fz-16;
+            text-transform: capitalize;
+            transition: all .3s ease;
+            padding-left: 10px;
+        }
+    }
+
+    .product-main{
+        .column{
+            width: calc(100% / 3);
+        }
+    }
+
+    .sec-box{
+        border: none;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        border-radius: 10px;
+        .sec-img{
+            padding: 25px 50px 20px;
+        }
+        .sec-content{
+            margin: 0 20px;
+        }
+    }
+}
