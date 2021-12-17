@@ -278,29 +278,10 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        transition: all .3s ease;
-        background-color: $g-C4C4-cl;
-        color: $b-cl;
-        margin: 0;
-        top: 50%;
-        transition: all .3s ease;
-
         @include max-media($bk-d-1200) {
             @include hidden;
         }
-
-        &:hover {
-            background-color: $main-cl;
-            color: $w-cl;
-        }
-
-        &::after {
-            font-size: 12px;
-            font-weight: bold;
-        }
+      
     }
 
     .swiper-button-prev {
@@ -316,9 +297,9 @@
             left: 10px;
         }
 
-        &::after {
-            margin-right: 3px;
-        }
+        // &::after {
+        //     margin-right: 3px;
+        // }
     }
 
     .swiper-button-next {
@@ -334,9 +315,9 @@
             right: 10px;
         }
 
-        &::after {
-            margin-left: 2px;
-        }
+        // &::after {
+        //     margin-left: 2px;
+        // }
 
     }
 

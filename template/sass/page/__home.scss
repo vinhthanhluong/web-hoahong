@@ -207,13 +207,10 @@
     .swiper-button-prev,
     .swiper-button-next {
         color: $main-cl-2;
-        margin: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        background-color: transparent;
 
         &::after {
             font-size: 20px;
-            font-weight: bold;
         }
     }
 

@@ -14,4 +14,49 @@
         width: 8px;
         height: 8px;
     }
+
+    
+
 }
+
+.swiper-button-prev,
+    .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        transition: all .3s ease;
+        background-color: $g-C4C4-cl;
+        color: $b-cl;
+        margin: 0;
+        top: 50%;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: $main-cl;
+            color: $w-cl;
+        }
+
+        &::after {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    .swiper-button-prev {
+        left:0;
+        transform: translate(0%, -50%);
+
+        &::after {
+            margin-right: 3px;
+        }
+    }
+
+    .swiper-button-next {
+        right: 0;
+        transform: translate(0%, -50%);
+
+        &::after {
+            margin-left: 3px;
+        }
+
+    }

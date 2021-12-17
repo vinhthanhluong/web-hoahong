@@ -1,0 +1,114 @@
+.consultants{
+    padding: 70px 0 0;
+
+    .title{
+        line-height: 1.2;
+    }
+
+    .consultant-wrapper{
+        position: relative;
+    }
+
+    .swiper-custom{
+        overflow: hidden;
+        
+    }
+
+    .swiper{
+        padding: 40px 0;
+        margin: 0 -15px;
+    }
+
+    .swiper-button-next , .swiper-button-prev{
+
+    }
+
+    .swiper-button-prev{
+        transform: translate(-100% , -50%);
+        left: -30px;
+        @include max-media($bk-d-1440) {
+            left: -10px;
+        }
+
+        @include max-media($bk-d-1200) {
+            transform: translateY(-50%);
+            left: 10px;
+        }
+    }
+
+    .swiper-button-next{
+        transform: translate(100% , -50%);
+        right: -30px;
+        @include max-media($bk-d-1440) {
+            right: -10px;
+        }
+
+        @include max-media($bk-d-1200) {
+            transform: translateY(-50%);
+            right: 10px;
+        }
+    }
+
+    .swiper-slide{
+        width: calc(100% / 4);
+        padding: 0 15px;
+    }
+
+    .consu-inner{
+        border-radius: 10px;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        padding: 18px;
+
+        &:hover{
+            img{
+                transform: scale(1.1);
+            }
+
+            .name{
+                color: $main-cl-2;
+            }
+
+            .chat-onl{
+                color: $main-cl;
+            }
+        }
+    }
+
+    .img{
+        border-radius: 10px;
+        overflow: hidden;
+       
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            transition: all .3s ease;
+        }
+    }
+
+    .content{
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid rgba($color: $b-cl, $alpha: .1);
+    }
+
+    .name, .job , .chat-onl{
+        margin-bottom: 9px;
+    }
+
+    .name{
+        display: block;
+        transition: all .3s ease;
+    }
+
+    .chat-onl{
+        transition: all .3s ease;
+        display: block;
+    }
+    
+
+
+
+
+}
