@@ -1,41 +1,71 @@
 .pagination {
-	margin-top: 30px;
-	text-align: center;
-	li {
-		display: inline-block;
-		vertical-align: middle;
-		.page-numbers {
-			width: 40px;
-			height: 40px;
-			border-radius: 100%;
-			border: 1px solid $border-cl;
-			//color: $t-b-cl;
-			font-weight: bold;
-			transition: all .3 ease;
-			@include lh(24, 14);
-			@include flex-mid;
-			&.current {
-				background-color: $main-cl;
-				color: $t-w-cl;
-				border: 1px solid transparent;
+    margin-top: 30px;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+		padding: 0 3.5px;
+
+        .page-numbers {
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            //color: $t-b-cl;
+            transition: all .3 ease;
+            @include lh(24, 14);
+            @include flex-mid;
+			background-color: $g-F8F8-cl;
+            &.current {
+                background-color: $main-cl-2;
+                color: $t-w-cl;
+                font-weight: bold;
+
+            }
+
+            &:hover {
+                background-color: $main-cl-2;
+                color: $t-w-cl;
+            }
+			@include max-media($bk-576){
+				width: 36px;
+				height: 36px;
 			}
-			&:hover {
-				background-color: $main-cl;
-				color: $t-w-cl;
-				border: 1px solid transparent;
+        }
+
+		.page-dot{
+			padding: 0 15px;
+			@include max-media($bk-576){
+				padding: 0 7px;
 			}
 		}
 
-		.page-arrow{
-			width: 40px;
-			height: 40px;
-			@include flex-mid;
-			font-size: 16px;
-			transition: all .3 ease;
-			&:hover {
-				background-color: $main-cl;
-				color: $t-w-cl;
+        .page-arrow {
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            @include flex-mid;
+            font-size: 16px;
+            transition: all .3 ease;
+			background-color: $g-F8F8-cl;
+            &:hover {
+                background-color: $main-cl-2;
+                color: $t-w-cl;
+				img{
+					filter: brightness(0) invert(1);
+				}
+            }
+
+			@include max-media($bk-576){
+				width: 36px;
+				height: 36px;
+			}
+        }
+		
+		&:nth-child(1){
+			img{
+				transform: scaleX(-1);
 			}
 		}
-	}
+    }
 }
