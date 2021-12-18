@@ -10,9 +10,9 @@ export default function SlideProductModule() {
             try {
                 const thumbsmall = new Swiper('#thumbs-small', {
                     speed: 1000,
-                    loop: true,
-                    spaceBetween: 10,
-                    slidesPerView: 4,
+                    // loop: true,
+                    // spaceBetween: 10,
+                    // slidesPerView: 3,
                     freeMode: true,
                     watchSlidesVisibility: true,
                     watchSlidesProgress: true,
@@ -23,8 +23,8 @@ export default function SlideProductModule() {
                         },
 
                         768: {
-                            spaceBetween: 10,
-                            slidesPerView: 4,
+                            spaceBetween: 30,
+                            slidesPerView: 3,
 
                         }
                     }
@@ -32,9 +32,9 @@ export default function SlideProductModule() {
 
                 const thumbbig = new Swiper('#thumbs-big', {
                     speed: 1000,
-                    loop: true,
+                    // loop: true,
                     slidesPerView: 1,
-                    spaceBetween: 10,
+                    // spaceBetween: 10,
                     thumbs: {
                         swiper: thumbsmall,
                     },

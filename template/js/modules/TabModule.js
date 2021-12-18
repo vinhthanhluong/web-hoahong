@@ -32,12 +32,12 @@ export default function TabModule() {
     }
 
     //class
-    if ($('.c-tab')) {
-        $(".c-tab__nav ul li").click(function () {
+    if ($('.c-tab').length) {
+        $(".tab-title").click(function () {
             var tab_id = $(this).attr("data-tab");
 
-            $(".c-tab__nav ul li").removeClass("active");
-            $(".c-tab__content").removeClass("active");
+            $(".tab-title").removeClass("active");
+            $(".tab-content").removeClass("active");
 
             $(this).addClass("active");
             $("." + tab_id).addClass("active");

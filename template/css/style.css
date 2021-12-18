@@ -6252,4 +6252,177 @@ html .mfp-wrap {
   display: block;
 }
 
+.contact-us .container-full {
+  padding: 0;
+}
+.contact-us .contact-head {
+  margin-bottom: 15px;
+}
+.contact-us .title {
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+.contact-us .head-tab {
+  display: flex;
+  align-items: center;
+}
+.contact-us .tab-title {
+  font-size: 16px;
+  color: #8C8C8C;
+  padding: 10px 30px 9px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+@media screen and (max-width: 991px) {
+  .contact-us .tab-title {
+    font-size: 14px;
+  }
+}
+.contact-us .tab-title.active {
+  font-weight: bold;
+  color: #fff;
+  background-color: #CA2026;
+}
+.contact-us .tab-content {
+  display: none;
+}
+.contact-us .tab-content.active {
+  display: block;
+  animation: showTab 1s;
+}
+.contact-us .contact-wrap {
+  display: flex;
+}
+.contact-us .contact-wrap .map {
+  width: 50%;
+}
+.contact-us .contact-wrap .map iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-us .contact-wrap .contact-box {
+  background-color: #9BCB4A;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  max-width: 370px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+.contact-us .contact-wrap .item img {
+  filter: brightness(0) invert(1);
+}
+.contact-us .contact-txt {
+  width: 50%;
+  position: relative;
+}
+.contact-us .contact-box {
+  padding: 30px;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.contact-us .contact-box .contact-tt {
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.contact-us .contact-box .item {
+  display: flex;
+  align-items: center;
+}
+.contact-us .contact-box .item:not(:first-child) {
+  margin-top: 15px;
+}
+.contact-us .contact-box .contact-link {
+  transition: all 0.3s ease;
+  padding-left: 20px;
+}
+.contact-us .contact-box .contact-link:hover {
+  color: #CA2026;
+}
+.contact-us .contact-swiper {
+  display: flex;
+  position: relative;
+}
+.contact-us .contact-swiper .img {
+  position: relative;
+}
+.contact-us .contact-swiper .img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.contact-us .contact-swiper .map {
+  width: 100%;
+  height: 100%;
+}
+.contact-us .contact-swiper .map iframe {
+  width: 100%;
+  height: 100%;
+}
+.contact-us .contact-swiper .contact-box {
+  background-color: #fff;
+}
+.contact-us .contact-swiper .contact-box:hover {
+  background-color: #9BCB4A;
+  color: #fff;
+}
+.contact-us .contact-swiper .contact-box:hover .contact-tt {
+  color: #fff;
+}
+.contact-us .contact-swiper .contact-box:hover .item img {
+  filter: brightness(0) invert(1);
+}
+.contact-us .contact-swiper .item img {
+  transition: all 0.3s ease;
+}
+.contact-us .contact-swiper .contact-tt {
+  transition: all 0.3s ease;
+}
+.contact-us .contact-swiper .contact-link {
+  transition: none;
+}
+.contact-us .swiper-bg {
+  width: 50%;
+}
+.contact-us .swiper-bg .swiper {
+  height: 100%;
+}
+.contact-us .swiper-sm {
+  width: 50%;
+}
+.contact-us .swiper-sm .swiper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  z-index: 1;
+  max-width: 60%;
+  padding-top: 200px;
+}
+.contact-us .swiper-sm .swiper-slide-thumb-active .contact-box {
+  background-color: #9BCB4A;
+  color: #fff;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+.contact-us .swiper-sm .swiper-slide-thumb-active .contact-tt {
+  color: #fff;
+}
+.contact-us .swiper-sm .swiper-slide-thumb-active .item img {
+  filter: brightness(0) invert(1);
+}
+.contact-us .contact-inner {
+  position: relative;
+}
+.contact-us .inner-txt {
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
 /*# sourceMappingURL=style.css.map */

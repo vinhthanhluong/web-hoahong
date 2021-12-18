@@ -112,3 +112,227 @@
 
 
 }
+
+.contact-us{
+    .container-full{
+        padding: 0;
+    }
+    .contact-head{
+        margin-bottom: 15px;
+    }
+
+    .title{
+        margin-bottom: 30px;
+        line-height: 1.2;
+    }
+
+    .head-tab{
+        display: flex;
+        align-items: center;
+    }
+
+    .tab-title{
+        @include fz-16;
+        color: #8C8C8C;
+        padding: 10px 30px 9px;
+        border-radius: 100px;
+        cursor: pointer;
+        &.active{
+            font-weight: bold;
+            color: $w-cl;
+            background-color: $main-cl-2;
+        }
+    }
+
+    .tab-content{
+        display: none;
+
+        &.active{
+            display: block;
+            animation: showTab 1s;
+        }
+    }
+
+    //js-1
+    .contact-wrap{
+        display: flex;
+        .map{
+            width: 50%;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .contact-box{
+            background-color: $main-cl;
+            color: $w-cl;
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-50% , -50%);
+            max-width: 370px;
+            box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        }
+
+        .item{
+            img{
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+   
+
+    .contact-txt{
+        width: 50%;
+        position: relative;
+    }
+
+
+    .contact-box{
+        padding: 30px;
+        transition: all .3s ease;
+        border-radius: 10px;
+
+        .contact-tt{
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .list{
+            
+        }
+
+        .item{
+            display: flex;
+            align-items: center;
+            &:not(:first-child){
+                margin-top: 15px;
+            }
+        }
+
+        .contact-link{
+            transition: all .3s ease;
+            padding-left: 20px;
+            &:hover{
+                color: $main-cl-2;
+            }
+           
+        }
+    }
+
+    //js-2
+    .contact-swiper{
+        display: flex;
+        position: relative;
+
+        .img{
+            position: relative;
+            &::before{
+                content: '';
+                @include pos-full;
+                background-color:rgba($color: $b-cl, $alpha: .6);
+            }
+        }
+
+        .map{
+            width: 100%;
+            height: 100%;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .contact-box{
+            background-color: $w-cl;
+
+            &:hover{
+                background-color: $main-cl;
+                color: $w-cl;
+
+                .contact-tt{
+                    color: $w-cl;
+                }
+
+                .item{
+                    img{
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+
+        .item{
+            img{
+                transition: all .3s ease;
+            }
+        }
+
+        .contact-tt{
+            transition: all .3s ease;
+        }
+
+        .contact-link{
+            transition: none;
+        }
+
+    }
+
+    .swiper-bg{
+        width: 50%;
+
+        .swiper{
+            height: 100%;
+        }
+    }
+
+    .swiper-sm{
+        width: 50%;
+
+        .swiper{
+            position: absolute;
+            top:50%;
+            right: 0;
+            transform: translate(0 , -50%);
+            z-index: 1;
+            max-width: 60%;
+            padding-top: 200px;
+        }
+
+        .swiper-slide-thumb-active{
+            .contact-box{
+                background-color: $main-cl;
+                color: $w-cl;
+                box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+            }
+
+            .contact-tt{
+                color: $w-cl;
+            }
+            
+            .item{
+                img{
+                    filter: brightness(0) invert(1);
+                }
+            }
+        }
+    }
+
+    .contact-inner{
+        position: relative;
+    }
+
+    .inner-txt{
+        transition: all .3s ease;
+        position: absolute;
+        top: 0;
+        transform: translate(0 , -100%);
+
+        // display: none;
+    }
+
+    
+
+
+}
