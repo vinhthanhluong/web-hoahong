@@ -1,7 +1,7 @@
 .about-us {
     background-color: $g-F2F2-cl;
     margin: -160px 0 0;
-
+    // overflow: hidden;
     @include max-media($bk-d-1200) {
         margin: -100px 0 0;
     }
@@ -228,7 +228,7 @@
 }
 
 .about-system {
-    overflow: hidden;
+    // overflow: hidden;
 
     .swiper-custom {
         position: relative;

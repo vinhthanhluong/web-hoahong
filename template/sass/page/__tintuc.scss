@@ -3,10 +3,22 @@
     .column {
         &.txt {
             width: calc(100% / 12 * 9);
+            @include max-media($bk-d-992){
+                width: calc(100% / 12 * 8);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
 
         &.sidebar {
             width: calc(100% / 12 * 3);
+            @include max-media($bk-d-992){
+                width: calc(100% / 12 * 4);
+            }
+            @include max-media($bk-d-768){
+                width: 100%;
+            }
         }
     }
 
@@ -21,8 +33,6 @@
     }
 
     .news-search {
-
-
         .f-search {
             position: relative;
         }
@@ -62,9 +72,15 @@
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid $g-C4C4-cl;
-
+        @include max-media($bk-d-992){
+            margin-top: 15px;
+            padding-top: 15px;
+        }
         .news-list {
             padding-left: 40px;
+            @include max-media($bk-d-992){
+                padding-left: 25px;
+            }
         }
 
         .news-link {
@@ -86,7 +102,10 @@
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid $g-C4C4-cl;
-
+        @include max-media($bk-d-992){
+            margin-top: 15px;
+            padding-top: 15px;
+        }
         .news-item {
             &:not(:first-child) {
                 margin-top: 15px;
@@ -121,6 +140,9 @@
         .content {
             padding-left: 20px;
             width: calc(100% - 80px);
+            @include max-media($bk-d-992){
+                padding-left: 15px;
+            }
         }
 
         .news-tt {
@@ -146,6 +168,10 @@
         margin-top: 30px;
         padding-top: 30px;
         border-top: 1px solid $g-C4C4-cl;
+        @include max-media($bk-d-992){
+            margin-top: 15px;
+            padding-top: 15px;
+        }
 
         .tag-list {
             display: flex;
@@ -176,8 +202,23 @@
     }
 
     .news-main {
+        .columns{
+            @include max-media($bk-d-1200){
+                margin: -7.5px;
+            }
+        }
         .column {
             width: calc(100% / 3);
+            @include max-media($bk-d-1200){
+                padding: 7.5px;
+            }
+            @include max-media($bk-d-992){
+                width: calc(100% / 2);
+            }
+
+            @include  max-media($bk-576){
+                width: 100%;
+            }
         }
     }
 
@@ -205,6 +246,9 @@
 
         .news-content {
             padding: 30px 20px 30px 30px;
+            @include max-media($bk-d-1200){
+                padding: 15px;
+            }
         }
 
         .news-img{
@@ -246,6 +290,9 @@
             border-radius: 10px;       
             overflow: hidden;
             margin: 30px 0;
+            @include max-media($bk-576){
+                margin: 20px 0;
+            }
         }
     }
 
@@ -256,7 +303,9 @@
         padding-top: 15px;
         margin-top: 30px;
         border-top: 1px solid $g-C4C4-cl;
-
+        @include max-media($bk-d-992){
+            margin-top: 20px;
+        }
         .social-item{
             width: 15px;
             height: 15px;
@@ -277,6 +326,9 @@
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        @include max-media($bk-d-1200){
+            margin-bottom: 20px;
+        }
 
         .news-item{
             display: flex;

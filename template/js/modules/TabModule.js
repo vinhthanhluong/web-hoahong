@@ -1,5 +1,5 @@
 export default function TabModule() {
-    if ($('.tab').length) {
+    if ($('.tab-w').length) {
         const $ = document.querySelector.bind(document);
         const $$ = document.querySelectorAll.bind(document);
 

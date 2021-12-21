@@ -411,6 +411,12 @@
             @include max-media($bk-d-1200){
                 padding: 15px;
             }
+            @include max-media($bk-d-992){
+                min-width: calc(100% / 4);
+            }
+            @include max-media($bk-576){
+                min-width: calc(100% / 3);
+            }
 
             &::after {
                 content: '';
@@ -474,7 +480,7 @@
 
         &.txt {
             width: calc(100% / 5 * 4);
-            @include max-media($bk-d-1200){
+            @include max-media($bk-d-992){
                 width: calc(100% / 4 * 3);
             }
             @include max-media($bk-d-768){
@@ -705,11 +711,12 @@
             background-color: $g-C4C4-cl;
         }
 
-        span {
+        p {
             background-color: $w-cl;
             position: relative;
             z-index: 1;
             padding-right: 6px;
+            display: inline-block;
         }
     }
 
@@ -891,6 +898,7 @@
 
     .title {
         margin-bottom: 30px;
+        text-align: center;
         @include max-media($bk-d-1200){
             margin-bottom: 20px;
         }

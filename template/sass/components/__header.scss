@@ -593,16 +593,12 @@
             height: 43px;
         }
         @include max-media($bk-d-768){
-            font-size: 0;
             padding: 10px;
         }
 
         img {
             height: max-content;
             margin-right: 10px;
-            @include max-media($bk-d-768){
-                margin-right: 0;
-            }
         }
     }
 

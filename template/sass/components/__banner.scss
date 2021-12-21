@@ -36,6 +36,10 @@
         width: 50px;
         height: 50px;
         background-color: rgba($color: $g-E5E5-cl, $alpha: .4);
+        @include max-media($bk-d-992){
+            width: 40px;
+            height: 40px;
+        }
 
         &:hover {
             &::after {
@@ -44,8 +48,8 @@
         }
 
         &::after {
-            font-size: 16px;
             color: $b-cl;
+            @include fz-16;
         }
     }
 
@@ -68,6 +72,12 @@
             opacity: 0.6;
             @include pos-full
         }
+
+        @include max-media($bk-d-1200){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
     }
 
     .banners-inner {
@@ -77,25 +87,55 @@
         color: $w-cl;
         position: relative;
         z-index: 1;
+        @include max-media($bk-d-1200){
+            margin-left: 0;
+            width: 60%;
+            max-width: 100%;
+            order: 1;
+            padding: 0;
+            padding-left: 15px;
+        }
+        @include max-media($bk-576){
+            width: 100%;
+            padding: 0 15px 30px;
+            order: 2;
+        }
     }
 
     .title {
         margin-bottom: 20px;
         line-height: 1.2;
+        @include max-media($bk-d-992){
+            margin-bottom: 10px;
+        }
 
-        br {}
+        br {
+            @include max-media($bk-576){
+                display: none;
+            }
+        }
     }
 
     .desc {
         margin-bottom: 20px;
         line-height: 1.5;
+        @include line-clamp(3);
+        @include max-media($bk-d-992){
+            margin-bottom: 15px;
+        }
     }
 
     .btn-more-r {
         padding: 12px 24px;
+        @include max-media($bk-d-992){
+            padding: 8px 15px;
+        }
 
         img {
             margin-left: 25px;
+            @include max-media($bk-d-992){
+                margin-left: 10px;
+            }
         }
     }
 
@@ -104,15 +144,27 @@
         background-color: $main-cl;
         position: relative;
         z-index: 1;
+        @include max-media($bk-d-1200){
+            width: 100%;
+            order: 3;
+        }
     }
 
     .swiper-con {
         max-width: 490px;
         margin: 0 auto;
         position: relative;
-
+        @include max-media($bk-d-992){
+            max-width: 370px;
+        }
+        @include max-media($bk-576){
+            max-width: 270px;
+        }
         .swiper {
             margin: 0 -15px;
+            @include max-media($bk-d-992){
+                margin: 0 -5px;
+            }
         }
 
 
@@ -120,12 +172,18 @@
             width: calc(100% / 4);
             padding: 0 15px;
             // width: 130px;
+            @include max-media($bk-d-992){
+                padding: 0 5px;
+            }
         }
     }
 
     .swiper-next {
         right: -15px;
         transform: translate(100%, -50%);
+        @include max-media($bk-576){
+            right: -7px;
+        }
 
         &::after {
             background-image: url('../img/svg/icon-right.svg');
@@ -135,6 +193,9 @@
     .swiper-prev {
         left: -15px;
         transform: translate(-100%, -50%);
+        @include max-media($bk-576){
+            left: -7px;
+        }
 
         &::after {
             background-image: url('../img/svg/icon-right.svg');
@@ -179,6 +240,26 @@
         right: 0;
         transform: translateY(-50%);
         z-index: 1;
+        @include max-media($bk-d-1900){
+            transform: translateY(-50%) scale(.8);
+            transform-origin: right;
+        }
+        @include max-media($bk-d-1440){
+            transform: translateY(-60%) scale(.6);
+        }
+        @include max-media($bk-d-1200){
+            position: relative;
+            transform: none;
+            width: 40%;
+            order: 2;
+            padding: 40px 0;
+        }
+        @include max-media($bk-576){
+            order: 1;
+            margin: 0 auto;
+            width: 50%;
+            padding: 30px 0 15px;
+        }
     }
 
     &.banners-page,

@@ -3,11 +3,17 @@
 
     .column {
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
     }
 
     .title {
         line-height: 1.2;
         margin-bottom: 30px;
+        @include max-media($bk-d-992){
+            margin-bottom: 15px;
+        }
     }
 
     .desc {
@@ -36,7 +42,9 @@
     .btn-more-r {
         padding: 12px 24px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .16);
-
+        @include max-media($bk-d-768){
+            padding: 8px 15px;
+        }
         img {
             margin-left: 25px;
         }
@@ -45,6 +53,10 @@
 
     .product-slide {
         display: flex;
+        flex-wrap: wrap;
+        @include max-media($bk-d-992){
+            flex-direction: column-reverse;
+        }
 
     }
 
@@ -57,9 +69,18 @@
         background-color: rgba($color: $g-C4C4-cl, $alpha: .8);
         @include hidden;
 
+        @include max-media($bk-d-992){
+            width: 30px;
+            height: 100%;
+        }
+
         &::after {
             transform: rotate(90deg);
             margin: 0;
+
+            @include max-media($bk-d-992){
+                transform: none;
+            }
         }
 
 
@@ -67,19 +88,32 @@
 
     .swiper-button-prev {
         top: 0%;
+        @include max-media($bk-d-992){
+            top: 0;
+            right: 0;
+        }
 
 
     }
 
     .swiper-button-next {
         bottom: 0;
+        @include max-media($bk-d-992){
+            bottom: auto;
+            top: 0;
+            right: 0;
+        }
     }
 
     .swiper-sm {
         width: 106px;
-
-
-
+        @include max-media($bk-d-1200){
+            width: 90px;
+        }
+        @include max-media($bk-d-992){
+            width: 100%;
+            margin-top: 10px;
+        }
         &:hover {
 
             .swiper-button-next,
@@ -91,6 +125,10 @@
         .swiper {
             max-height: 454px;
             border-radius: 10px;
+            @include max-media($bk-d-1200){
+                max-height: 390px;
+                max-height: 364px;
+            }
         }
 
         .swiper-slide-thumb-active {
@@ -104,12 +142,23 @@
             border-radius: 10px;
             overflow: hidden;
             cursor: pointer;
+            height: 100%;
+            img{
+                height: 100%;
+            }
         }
     }
 
     .swiper-bg {
         width: calc(100% - 106px);
         padding-left: 10px;
+        @include max-media($bk-d-1200){
+            width: calc(100% - 90px);
+        }
+        @include max-media($bk-d-992){
+            width: 100%;
+            padding-left: 0;
+        }
 
         .swiper {
             border: 1px solid rgba($color: $b-cl, $alpha: .3);
@@ -117,11 +166,199 @@
         }
 
     }
+
+    .product-tb {
+        padding-top: 40px;
+    }
+
+    .tab-link {
+        border-color: $g-C4C4-cl;
+        @include max-media($bk-576){
+            justify-content: space-between;
+        }
+
+        .tab-line {
+            background-color: $main-cl-2;
+        }
+    }
+
+
+    .tab-title {
+        @include fz-20;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $g-C4C4-cl;
+        cursor: pointer;
+        padding: 0 0 5px 0;
+        @include max-media($bk-576){
+            font-size: 16px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 26px;
+            @include max-media($bk-576){
+                margin-left: 0;
+            }
+        }
+
+        &.active {
+            color: $main-cl-2;
+        }
+    }
+
+
+    .product-wrap {
+        display: flex;
+        margin-top: 15px;
+
+        .mona-content {
+            width: calc(100% / 12 * 9);
+            padding-right: 30px;
+            @include max-media($bk-576){
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        .product-qc {
+            width: calc(100% / 12 * 3);
+            @include max-media($bk-576){
+                display: none;
+            }
+        }
+    }
+
+    .mona-content {
+        h4 {
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+    }
+
+    .mona-img {
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 30px 0;
+
+    }
+
+    .img-qc {
+        border-radius: 10px;
+        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+        overflow: hidden;
+        display: block;
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+        }
+    }
+
+    .tab-content{
+        margin-top: 15px;
+    }
+
+    .product-table {
+        
+        border: 1px solid $g-C4C4-cl;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .b-table{
+            width: 100%;
+        }
+
+        .title-table{
+            background-color: $main-cl;
+            color: $w-cl;
+            padding: 15px 25px;
+            @include fz-18;
+            font-weight: 600;
+            @include max-media($bk-d-768){
+                padding: 10px 15px;
+            }
+        }
+        // thead {
+        //     background-color: $main-cl;
+        //     color: $w-cl;
+        //     td {
+        //         padding: 15px 25px;
+        //         @include fz-18;
+        //         &:nth-child(1){
+        //             width: 80%;
+                    
+        //         }
+        //         &:nth-child(2){
+        //             // width: calc(100% / 12 * 9 - 30px);
+        //             width: 20%;
+                   
+        //         }
+               
+        //     }
+        // }
+
+        tbody {
+            border-radius: 10px;
+
+            tr {
+                td {
+                    &:nth-child(1) {
+                        background-color: #F3F5F6;
+                        border-right: 1px solid $g-C4C4-cl;
+                    }
+
+                    // border: 1px solid $g-C4C4-cl;
+                }
+
+                &:not(:first-child) {
+                    border-top: 1px solid $g-C4C4-cl;
+                }
+
+
+                // &:not(:last-child){
+                //     border-bottom: 1px solid rgba($color: $b-cl, $alpha: .1);
+                // }
+            }
+
+            td {
+                padding: 12px 25px;
+                @include max-media($bk-d-768){
+                    padding: 10px 15px;
+                }
+                @include max-media($bk-576){
+                    padding: 10px;
+                }
+                &:nth-child(1){
+                    width: calc(100% / 12 * 3 + 30px);
+                    @include max-media($bk-d-768){
+                        width: calc(100% / 12 * 4 );
+                    }
+                }
+                &:nth-child(2){
+                    width: calc(100% / 12 * 9 - 30px);
+                    @include max-media($bk-d-768){
+                        width: calc(100% / 12 * 8 );
+                    }
+                }
+            }
+
+        }
+    }
+
+
 }
 
 .similar-product {
     overflow: hidden;
-
     .title {
         line-height: 1.2;
     }
@@ -139,11 +376,26 @@
     .swiper {
         padding: 30px 0;
         margin: 0 -15px;
+        @include max-media($bk-d-992){
+            margin:  0 -7.5px;
+        }
+        @include max-media($bk-576){
+        }
     }
 
     .swiper-slide {
         width: calc(100% / 4);
         padding: 0 15px;
+        @include max-media($bk-d-992){
+            width: calc(100% / 3);
+            padding: 0 7.5px;
+        }
+        @include max-media($bk-d-768){
+            width: 50%;
+        }
+        @include max-media($bk-576){
+            width: 100%;
+        }
     }
 
     .swiper-button-prev,
@@ -152,6 +404,7 @@
     .swiper-button-prev {
         transform: translate(-100%, -50%);
         left: -30px;
+
         @include max-media($bk-d-1440) {
             left: -10px;
         }
@@ -167,6 +420,7 @@
     .swiper-button-next {
         transform: translate(100%, -50%);
         right: -30px;
+
         @include max-media($bk-d-1440) {
             right: -10px;
         }

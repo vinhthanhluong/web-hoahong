@@ -4,6 +4,9 @@
     }
     .column{
         width: 50%;
+        @include max-media($bk-d-768){
+            width: 100%;
+        }
     }
 
     .service-box{
@@ -27,17 +30,33 @@
     .title{
         margin-bottom: 30px;
         line-height: 1.2;
+        @include max-media($bk-d-1200){
+            margin-bottom: 15px;
+        }
+        @include max-media($bk-d-992){
+            margin-bottom: 7px;
+        }
     }
 
     .desc{
         margin-bottom: 15px;
         line-height: 1.5;
+        @include line-clamp(6);
+        @include max-media($bk-d-992){
+            -webkit-line-clamp: 4;
+        }
     }
 
     .btn-more-r{
         padding: 12px 24px;
+        @include max-media($bk-d-992){
+            padding: 8px 15px;
+        }
         img{
             margin-left: 25px;
+            @include max-media($bk-d-992){
+                margin-left: 10px;
+            }
         }
     }
 }
