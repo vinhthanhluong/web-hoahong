@@ -10,7 +10,7 @@ export default function SlideProductModule() {
             try {
                 const thumbsmall = new Swiper('#thumbs-small', {
                     speed: 1000,
-                    // loop: true,
+                    loop: true,
                     // spaceBetween: 10,
                     // slidesPerView: 3,
                     freeMode: true,
@@ -18,21 +18,29 @@ export default function SlideProductModule() {
                     watchSlidesProgress: true,
                     breakpoints: {
                         320: {
-                            spaceBetween: 10,
-                            slidesPerView: 3,
+                            spaceBetween: 15,
+                            slidesPerView: 1,
+                        },
+                        550 :{
+                            spaceBetween: 15,
+                            slidesPerView: 2,
                         },
 
                         768: {
+                            spaceBetween: 20,
+                            slidesPerView: 2,
+                        },
+
+                        1440: {
                             spaceBetween: 30,
                             slidesPerView: 3,
-
                         }
                     }
                 });
 
                 const thumbbig = new Swiper('#thumbs-big', {
                     speed: 1000,
-                    // loop: true,
+                    loop: true,
                     slidesPerView: 1,
                     // spaceBetween: 10,
                     thumbs: {
@@ -129,5 +137,7 @@ export default function SlideProductModule() {
     }
 
     $('#thumb-product').length && slideThumb();
+
+    
 
 }

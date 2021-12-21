@@ -1,31 +1,35 @@
-.consultants{
+.consultants {
     padding: 70px 0 0;
 
-    .title{
+    .title {
         line-height: 1.2;
     }
 
-    .consultant-wrapper{
+    .consultant-wrapper {
         position: relative;
     }
 
-    .swiper-custom{
+    .swiper-custom {
         overflow: hidden;
-        
+
     }
 
-    .swiper{
+    .swiper {
         padding: 40px 0;
         margin: 0 -15px;
+
+        @include max-media($bk-d-992) {
+            margin: 0 -7.5px;
+        }
     }
 
-    .swiper-button-next , .swiper-button-prev{
+    .swiper-button-next,
+    .swiper-button-prev {}
 
-    }
-
-    .swiper-button-prev{
-        transform: translate(-100% , -50%);
+    .swiper-button-prev {
+        transform: translate(-100%, -50%);
         left: -30px;
+
         @include max-media($bk-d-1440) {
             left: -10px;
         }
@@ -36,9 +40,10 @@
         }
     }
 
-    .swiper-button-next{
-        transform: translate(100% , -50%);
+    .swiper-button-next {
+        transform: translate(100%, -50%);
         right: -30px;
+
         @include max-media($bk-d-1440) {
             right: -10px;
         }
@@ -49,36 +54,52 @@
         }
     }
 
-    .swiper-slide{
+    .swiper-slide {
         width: calc(100% / 4);
         padding: 0 15px;
+
+        @include max-media($bk-d-1200) {
+            width: calc(100% / 3);
+        }
+
+        @include max-media($bk-d-992) {
+            padding: 0 7.5px;
+        }
+
+        @include max-media($bk-d-768) {
+            width: 50%;
+        }
+
+        @include max-media(500px) {
+            width: 100%;
+        }
     }
 
-    .consu-inner{
+    .consu-inner {
         border-radius: 10px;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         padding: 18px;
 
-        &:hover{
-            img{
+        &:hover {
+            img {
                 transform: scale(1.1);
             }
 
-            .name{
+            .name {
                 color: $main-cl-2;
             }
 
-            .chat-onl{
+            .chat-onl {
                 color: $main-cl;
             }
         }
     }
 
-    .img{
+    .img {
         border-radius: 10px;
         overflow: hidden;
-       
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -87,252 +108,429 @@
         }
     }
 
-    .content{
+    .content {
         margin-top: 18px;
         padding-top: 18px;
         border-top: 1px solid rgba($color: $b-cl, $alpha: .1);
+
+        @include max-media($bk-d-992) {
+            margin-top: 15px;
+            padding-top: 15px;
+        }
     }
 
-    .name, .job , .chat-onl{
+    .name,
+    .job,
+    .chat-onl {
         margin-bottom: 9px;
+
+        @include max-media($bk-d-992) {
+            margin-bottom: 5px;
+        }
     }
 
-    .name{
+    .name {
         display: block;
         transition: all .3s ease;
     }
 
-    .chat-onl{
+    .chat-onl {
         transition: all .3s ease;
         display: block;
     }
-    
+
 
 
 
 
 }
 
-.contact-us{
-    .container-full{
+.contact-us {
+    .container-full {
         padding: 0;
     }
-    .contact-head{
+
+    .contact-head {
         margin-bottom: 15px;
     }
 
-    .title{
+    .title {
         margin-bottom: 30px;
         line-height: 1.2;
     }
 
-    .head-tab{
+    .head-tab {
         display: flex;
         align-items: center;
     }
 
-    .tab-title{
+    .tab-title {
         @include fz-16;
         color: #8C8C8C;
         padding: 10px 30px 9px;
         border-radius: 100px;
         cursor: pointer;
-        &.active{
+
+        &.active {
             font-weight: bold;
             color: $w-cl;
             background-color: $main-cl-2;
         }
     }
 
-    .tab-content{
+    .tab-content {
         display: none;
 
-        &.active{
+        &.active {
             display: block;
-            animation: showTab 1s;
+            animation: OutIn 1s;
         }
     }
 
     //js-1
-    .contact-wrap{
+    .contact-wrap {
         display: flex;
-        .map{
+        flex-wrap: wrap;
+
+        .map {
             width: 50%;
-            iframe{
+
+            @include max-media($bk-d-768) {
+                width: 100%;
+                height: 350px;
+            }
+
+            iframe {
                 width: 100%;
                 height: 100%;
             }
         }
 
-        .contact-box{
+        .contact-box {
             background-color: $main-cl;
             color: $w-cl;
             position: absolute;
             top: 50%;
             left: 0%;
-            transform: translate(-50% , -50%);
+            transform: translate(-50%, -50%);
             max-width: 370px;
             box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
+
+            @include max-media($bk-d-992) {
+                padding: 20px;
+            }
+
+            @include max-media($bk-d-768) {
+                left: 50%;
+                max-width: 100%;
+                width: 320px;
+
+            }
         }
 
-        .item{
-            img{
+        .item {
+            img {
                 filter: brightness(0) invert(1);
             }
         }
     }
-   
 
-    .contact-txt{
+
+    .contact-txt {
         width: 50%;
         position: relative;
+
+        @include max-media($bk-d-768) {
+            width: 100%;
+        }
+
+        .img {
+            height: 100%;
+            position: relative;
+
+            &::before {
+                content: '';
+                @include pos-full;
+                background-color: rgba($color: $b-cl, $alpha: .6);
+                @include hidden;
+
+                @include max-media($bk-d-768) {
+                    @include visible;
+                }
+            }
+
+            @include max-media($bk-d-1200) {
+                min-height: 300px;
+            }
+
+            @include max-media($bk-d-768) {
+                min-height: 260px;
+            }
+
+            img {
+                height: 100%;
+
+            }
+        }
     }
 
 
-    .contact-box{
+    .contact-box {
         padding: 30px;
         transition: all .3s ease;
         border-radius: 10px;
 
-        .contact-tt{
+        .contact-tt {
             line-height: 1.2;
             margin-bottom: 15px;
         }
 
-        .list{
-            
-        }
+        .list {}
 
-        .item{
+        .item {
             display: flex;
             align-items: center;
-            &:not(:first-child){
+
+            &:not(:first-child) {
                 margin-top: 15px;
             }
         }
 
-        .contact-link{
+        .contact-link {
             transition: all .3s ease;
             padding-left: 20px;
-            &:hover{
+
+            &:hover {
                 color: $main-cl-2;
             }
-           
+
         }
     }
 
     //js-2
-    .contact-swiper{
+    .contact-swiper {
         display: flex;
         position: relative;
+        flex-wrap: wrap;
 
-        .img{
+        .img {
             position: relative;
-            &::before{
+
+            img {
+                height: 100px;
+                min-height: 560px;
+
+                @include max-media($bk-d-1440) {
+                    min-height: 460px;
+                }
+
+                @include max-media($bk-d-992) {
+                    min-height: 400px;
+                }
+            }
+
+            &::before {
                 content: '';
                 @include pos-full;
-                background-color:rgba($color: $b-cl, $alpha: .6);
+                background-color: rgba($color: $b-cl, $alpha: .6);
             }
         }
 
-        .map{
+        .box-map {
+            height: 100%;
+            transition: all .3s ease;
+            @include hidden;
+        }
+
+        .map {
             width: 100%;
             height: 100%;
-            iframe{
+            animation: fadeUpIn 1.2s;
+
+            iframe {
                 width: 100%;
                 height: 100%;
             }
         }
 
-        .contact-box{
+        .contact-box {
             background-color: $w-cl;
 
-            &:hover{
+            &:hover {
                 background-color: $main-cl;
                 color: $w-cl;
 
-                .contact-tt{
+                .contact-tt {
                     color: $w-cl;
                 }
 
-                .item{
-                    img{
+                .item {
+                    img {
                         filter: brightness(0) invert(1);
                     }
                 }
             }
         }
 
-        .item{
-            img{
+        .item {
+            img {
                 transition: all .3s ease;
             }
         }
 
-        .contact-tt{
+        .contact-tt {
             transition: all .3s ease;
         }
 
-        .contact-link{
+        .contact-link {
             transition: none;
         }
 
     }
 
-    .swiper-bg{
+    .swiper-bg {
         width: 50%;
 
-        .swiper{
+        @include max-media($bk-d-768) {
+            width: 100%;
+            height: 350px;
+        }
+
+        .swiper {
             height: 100%;
+            overflow: visible;
+        }
+
+        .swiper-slide-active {
+            .box-map {
+                @include visible;
+            }
+
+            .inner-txt {
+                @include visible;
+            }
+
+            .map {
+                animation: fadeInUp 1.2s;
+            }
+
         }
     }
 
-    .swiper-sm{
+    .swiper-sm {
         width: 50%;
 
-        .swiper{
-            position: absolute;
-            top:50%;
-            right: 0;
-            transform: translate(0 , -50%);
-            z-index: 1;
-            max-width: 60%;
-            padding-top: 200px;
+        @include max-media($bk-d-768) {
+            width: 100%;
         }
 
-        .swiper-slide-thumb-active{
-            .contact-box{
+        .contact-box {
+            padding: 20px;
+        }
+
+        .contact-tt {
+            margin-bottom: 10px;
+        }
+
+        .contact-link {
+            padding-left: 10px;
+        }
+
+        .swiper {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -30%);
+            z-index: 1;
+            max-width: 60%;
+
+            @include max-media($bk-d-1440) {
+                transform: translate(0, -10%);
+            }
+
+            @include max-media($bk-d-1200) {
+                transform: translate(0, -15%);
+            }
+
+            @include max-media($bk-d-992) {
+                max-width: 70%;
+            }
+
+            @include max-media($bk-d-768) {
+                max-width: 100%;
+                right: 15px;
+                left: 15px;
+                top: auto;
+                bottom: 40px;
+                transform: translate(0 , 0);
+            }
+        }
+
+        .swiper-slide-thumb-active {
+            .contact-box {
                 background-color: $main-cl;
                 color: $w-cl;
                 box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
             }
 
-            .contact-tt{
+            .contact-tt {
                 color: $w-cl;
             }
-            
-            .item{
-                img{
+
+            .item {
+                img {
                     filter: brightness(0) invert(1);
                 }
             }
+
+
         }
     }
 
-    .contact-inner{
+    .contact-inner {
         position: relative;
+        cursor: pointer;
     }
 
-    .inner-txt{
+    .inner-txt {
         transition: all .3s ease;
         position: absolute;
         top: 0;
-        transform: translate(0 , -100%);
+        transform: translate(100%, 0);
+        transition: all .3s ease;
+        right: 0;
+        left: auto;
+        max-width: 570px;
+        padding: 40px 0 0 30px;
+        z-index: 9;
 
-        // display: none;
+        @include max-media($bk-d-1200) {
+            max-width: 400px;
+            padding: 20px 0 0 20px;
+        }
+        @include max-media($bk-d-768){
+            top: auto;
+            bottom: 0;
+            left: 0;
+            transform: translate(0 , 100%);
+            max-width: 100%;
+            padding:  30px 15px  15px;
+        }
+
+        .cont-tt {
+            margin-bottom: 15px;
+
+            @include max-media($bk-d-1200) {
+                margin-bottom: 7px;
+            }
+        }
+
+        .desc {
+            @include line-clamp(4);
+        }
     }
 
-    
+
 
 
 }
