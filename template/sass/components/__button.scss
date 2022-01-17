@@ -41,7 +41,7 @@
         align-items: center;
         text-transform: none;
         font-weight: normal;
-        &::after {
+        &::before {
             content: '';
             background-color: $main-cl;
             transform: scaleX(0);
@@ -52,7 +52,7 @@
         }
 
         &:hover {
-            &::after {
+            &::before {
                 transform: scale(1);
                 transform-origin: left center;
             }

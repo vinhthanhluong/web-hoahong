@@ -46,6 +46,12 @@ export default function SlideProductModule() {
                     thumbs: {
                         swiper: thumbsmall,
                     },
+
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+
                 });
                 //  click slide
                 // if ($('.pro-color.cl-w').length) {
@@ -74,7 +80,7 @@ export default function SlideProductModule() {
             try {
                 const thumbsmall = new Swiper('#thumb-small', {
                     speed: 1000,
-                    loop: true,
+                    // loop: true,
                     // spaceBetween: 10,
                     // slidesPerView: 3,
                     direction: 'vertical',
@@ -115,7 +121,7 @@ export default function SlideProductModule() {
 
                 const thumbbig = new Swiper('#thumb-big', {
                     speed: 1000,
-                    loop: true,
+                    // loop: true,
                     slidesPerView: 1,
                     spaceBetween: 10,
                     thumbs: {

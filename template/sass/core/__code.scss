@@ -87,6 +87,7 @@
     .sec-tt{
         transition:  all .3s ease;
         margin-bottom: 5px;
+        @include line-clamp(2);
     }
 
     .sec-desc{

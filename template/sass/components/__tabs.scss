@@ -18,7 +18,7 @@
 
         &.active {
             display: block;
-            animation: fadeInUp 1s;
+            animation: OutIn .3s ease-in;
         }
     }
     &-lines {
