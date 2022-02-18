@@ -147,6 +147,8 @@
 }
 
 .contact-us {
+    overflow: hidden;
+
     .container-full {
         padding: 0;
     }
@@ -158,6 +160,9 @@
     .title {
         margin-bottom: 30px;
         line-height: 1.2;
+        @include max-media($bk-d-992){
+            margin-bottom: 15px;
+        }
     }
 
     .head-tab {
@@ -852,6 +857,47 @@
         .desc {
             @include line-clamp(4);
         }
+    }
+
+    &.contact-nw{
+        .head-dm{
+            display: none;
+            padding: 10px 15px;
+            background-color: $main-cl;
+            color: $w-cl;
+            font-weight: bold;
+            @include fz-20;
+            @include  max-media($bk-576){
+                display: block;
+            }
+        }
+
+        .head-tab{
+            @include max-media($bk-576){
+                flex-wrap: wrap;
+                background-color: rgba($color: #8C8C8C  , $alpha: .2);
+                padding: 10px;
+            }
+        }
+
+        .tab-title{
+            @include max-media($bk-d-768){
+                padding: 10px 20px 9px;
+            }
+
+            @include max-media($bk-576){
+                display: block;
+                width: 100%;
+                border-radius: 0;
+                color: $b-cl;
+                padding: 10px;
+
+                &.active{
+                    color: $w-cl;
+                }
+            }
+        }
+
     }
 
 }

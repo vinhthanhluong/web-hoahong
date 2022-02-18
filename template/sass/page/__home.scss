@@ -157,6 +157,27 @@
 .cate-home {
     overflow: hidden;
 
+    &.ca-new{
+        .column{
+            &:nth-child(3) {
+    
+                .cate-img {
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        .cate-img {
+            img {
+                margin: 0 auto;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
     .column {
         width: calc(100%/ 4);
         position: relative;
@@ -171,6 +192,12 @@
                     display: none;
                 }
             }
+
+            // .cate-img {
+            //     img {
+            //         width: 50px;
+            //     }
+            // }
         }
 
         &::before {
@@ -204,26 +231,24 @@
     .cate-img {
         img {
             margin: 0 auto;
+            // width: 60px;
+            // height: 60px;
         }
     }
 }
 
 .brand-famous {
     background-color: $main-cl;
-    padding: 40px 0 60px;
+    padding: 40px 0 20px;
     overflow: hidden;
 
-    @include max-media($bk-d-1440) {
-        padding-bottom: 40px;
-    }
+    // @include max-media($bk-d-1200) {
+    //     padding-bottom: 30px;
+    // }
 
-    @include max-media($bk-d-1200) {
-        padding-bottom: 30px;
-    }
-
-    @include max-media($bk-d-992) {
-        padding-bottom: 10px;
-    }
+    // @include max-media($bk-d-992) {
+    //     padding-bottom: 10px;
+    // }
 
     .title {
         line-height: 1.2;
@@ -231,16 +256,31 @@
 
     .swiper-row {
         position: relative;
-        margin: 0 -20px;
+        // margin: 0 -20px;
     }
 
     .swiper {
         padding: 30px 0;
-        padding: 30px 20px;
+        // padding: 30px 20px;
+        margin: 0 -2.5px;
 
         @include max-media($bk-d-992) {
             // padding-top: 20px;
-            padding: 20px;
+            padding: 20px 0;
+        }
+
+        &-slide{
+            width: calc(100% / 8);
+            padding: 0 2.5px;
+            @include max-media($bk-d-1200){
+                width: calc(100% / 5);
+            }
+            @include max-media($bk-d-768){
+                width: calc(100% / 4);
+            }
+            @include max-media($bk-576){
+                width: calc(100% / 2);
+            }
         }
     }
 
@@ -249,9 +289,10 @@
         color: $main-cl-2;
         background-color: transparent;
         transform: translate(0%, -50%);
-
+    
         &::after {
             font-size: 20px;
+            font-weight: bold;
         }
     }
 
@@ -292,15 +333,20 @@
 
     .brand-box {
         background-color: $w-cl;
-        padding: 16px 26px;
-        box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
-        border-radius: 10px;
+        // padding: 16px 26px;
+        // border-radius: 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
         display: block;
         overflow: hidden;
+        transition: all .3s ease;
 
-        box-shadow: 0px 0px 15px rgba($color: $b-cl, $alpha: .25);
 
         &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba($color: $b-cl, $alpha: .25);
+            z-index: 1;
+            position: relative;
             img {
                 transform: scale(1.1);
             }

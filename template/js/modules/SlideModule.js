@@ -33,7 +33,7 @@ export default function SlideModule() {
                 allowTouchMove: notSlide,
 
                 autoplay: {
-                    delay: 4000,
+                    delay: 6000,
                 },
 
                 pagination: {
@@ -123,19 +123,22 @@ export default function SlideModule() {
         try {
             new Swiper(slider, {
                 speed: 1200,
-                // slidesPerView: 'auto',
+                slidesPerView: 'auto',
+                // spaceBetween: 15,
+
                 autoHeight: false,
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
-                // autoplay: {
-                //     delay: 4000,
-                // },
-
-                grid: {
-                    rows: 2,
-                    fill: 'row',
+                loop:true,
+                autoplay: {
+                    delay: 5000,
                 },
+
+                // grid: {
+                //     rows: 2,
+                //     fill: 'row',
+                // },
 
                 pagination: {
                     el: pagination,
@@ -147,24 +150,20 @@ export default function SlideModule() {
                     prevEl: prevBtn,
                 },
 
-                breakpoints: {
-                    320: {
-                        spaceBetween: 15,
-                        slidesPerView: 2,
-                    },
-                    576: {
-                        slidesPerView: 3,
-                        spaceBetween: 15,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                    1200: {
-                        slidesPerView: 5,
-                        spaceBetween: 30,
-                    }
-                }
+                // breakpoints: {
+                //     320: {
+                //         spaceBetween: 15,
+                //     },
+                //     576: {
+                //         spaceBetween: 15,
+                //     },
+                //     991: {
+                //         spaceBetween: 15,
+                //     },
+                //     1200: {
+                //         spaceBetween: 5,
+                //     }
+                // }
 
 
             });

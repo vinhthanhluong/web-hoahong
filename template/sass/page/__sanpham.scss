@@ -1,36 +1,40 @@
-.product{
-    .column{
-        &.sidebar{
+.product {
+    .column {
+        &.sidebar {
             width: calc(100% / 12 * 3);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: calc(100% / 12 * 4);
             }
-            @include max-media($bk-d-768){
+
+            @include max-media($bk-d-768) {
                 width: 100%;
             }
         }
 
-        &.txt{
+        &.txt {
             width: calc(100% / 12 * 9);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: calc(100% / 12 * 8);
             }
-            @include max-media($bk-d-768){
+
+            @include max-media($bk-d-768) {
                 width: 100%;
             }
         }
     }
 
-    .product-search{
-        .label{
+    .product-search {
+        .label {
             margin-bottom: 15px;
         }
 
-        .f-search{
+        .f-search {
             position: relative;
         }
 
-        .f-control{
+        .f-control {
             border-radius: 100px;
             padding: 10px 15px;
             font-size: 12px;
@@ -40,12 +44,12 @@
             background-color: $g-F8F8-cl;
             line-height: 1;
 
-            &::placeholder{
+            &::placeholder {
                 opacity: .4;
             }
         }
 
-        .f-submit{
+        .f-submit {
             border-radius: 100%;
             width: 30px;
             height: 30px;
@@ -59,50 +63,130 @@
         }
     }
 
-    .product-cata{
+    .product-calog {
         margin-top: 30px;
         @include max-media($bk-d-992){
             margin-top: 15px;
         }
 
-        .label{
+        .label {
             margin-bottom: 15px;
             @include max-media($bk-d-992){
                 margin-bottom: 10px;
             }
         }
 
-        .product-item{
-            &:not(:first-child){
+        .c-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .c-item {
+            @include fz-16;
+
+            &:not(:first-child) {
                 margin-top: 15px;
                 @include max-media($bk-d-992){
                     margin-top: 10px;
                 }
             }
+
+            &.active {
+                .c-icon {
+                    transform: rotate(90deg);
+                }
+            }
+
+            a {
+                &:hover{
+                color: $main-cl;
+
+                }
+            }
         }
 
-        .hide-int{
+        .c-itm {
+            display: block;
+        }
+
+        .c-span {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .c-icon {
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        .c-content {
+            margin-top: 10px;
+            padding: 0 10px;
             display: none;
-            &:checked + .checkmark{
-                .checked{
+        }
+
+        .c-itm {
+            &:not(:last-child) {
+                margin-bottom: 5px;
+
+            }
+
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba($color: $b-cl, $alpha: .1);
+        }
+    }
+
+    .product-cata {
+        margin-top: 30px;
+
+        @include max-media($bk-d-992) {
+            margin-top: 15px;
+        }
+
+        .label {
+            margin-bottom: 15px;
+
+            @include max-media($bk-d-992) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .product-item {
+            &:not(:first-child) {
+                margin-top: 15px;
+
+                @include max-media($bk-d-992) {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .hide-int {
+            display: none;
+
+            &:checked+.checkmark {
+                .checked {
                     border-color: $main-cl-2;
-                    img{
+
+                    img {
                         @include visible;
                     }
                 }
-                .text-check{
+
+                .text-check {
                     color: $main-cl-2;
                 }
             }
         }
 
-        .checkmark{
+        .checkmark {
             display: flex;
             align-items: center;
             cursor: pointer;
         }
 
-        .checked{
+        .checked {
             border: 1px solid rgba($color: $b-cl, $alpha: .3);
             border-radius: 5px;
             @include flex-mid;
@@ -110,7 +194,7 @@
             height: 15px;
             transition: all .3s ease;
 
-            img{
+            img {
                 width: 9px;
                 height: 9px;
                 @include hidden;
@@ -118,7 +202,7 @@
             }
         }
 
-        .text-check{
+        .text-check {
             @include fz-16;
             text-transform: capitalize;
             transition: all .3s ease;
@@ -126,31 +210,37 @@
         }
     }
 
-    .product-main{
-        .column{
+    .product-main {
+        .column {
             width: calc(100% / 3);
-            @include max-media($bk-d-992){
+
+            @include max-media($bk-d-992) {
                 width: calc(100% / 2);
             }
         }
     }
 
-    .sec-box{
+    .sec-box {
         border: none;
         box-shadow: 10px 10px 30px rgba($color: $b-cl, $alpha: .25);
         border-radius: 10px;
-        .sec-img{
+
+        .sec-img {
             padding: 25px 50px 20px;
-            @include max-media($bk-d-1200){
+
+            @include max-media($bk-d-1200) {
                 padding: 20px 30px;
             }
-            @include max-media($bk-576){
+
+            @include max-media($bk-576) {
                 padding: 15px 20px;
             }
         }
-        .sec-content{
+
+        .sec-content {
             margin: 0 20px;
-            @include max-media($bk-576){
+
+            @include max-media($bk-576) {
                 margin: 0 15px;
             }
         }

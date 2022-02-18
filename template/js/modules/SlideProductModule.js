@@ -83,7 +83,7 @@ export default function SlideProductModule() {
                     // loop: true,
                     // spaceBetween: 10,
                     // slidesPerView: 3,
-                    direction: 'vertical',
+                    // direction: 'vertical',
                     freeMode: true,
                     watchSlidesVisibility: true,
                     watchSlidesProgress: true,
@@ -91,19 +91,17 @@ export default function SlideProductModule() {
                         320: {
                             spaceBetween: 10,
                             slidesPerView: 3,
-                            direction: 'horizontal',
+                            // direction: 'horizontal',
                         },
 
                         400: {
                             spaceBetween: 10,
-                            slidesPerView: 4,
-                            direction: 'horizontal',
+                            slidesPerView: 3,
                         },
 
                         768: {
                             spaceBetween: 10,
                             slidesPerView: 4,
-                            direction: 'horizontal',
                         },
                         992: {
                             spaceBetween: 10,
